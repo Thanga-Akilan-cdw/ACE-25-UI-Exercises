@@ -7,11 +7,12 @@
 
 .titlebar{
     text-align: center;
+    font-size: 23px;
+    font-family: "IBM Plex Sans";
     color: white;
     background-color: #42133e;
-    line-height: 13vh;
-    height: 13vh;
-
+    line-height: 152px;
+    height: 152px;
 }
 
 .home-banner{
@@ -19,20 +20,110 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
 }
 
 .cards-section{
-    margin: 8%;
+    margin: 90px 99px 32px 99px;
+    border: none;
 }
 
 .card{
     display: inline-block;
-    width: 400px;
-    margin: 25px;
+    width: 480px;
+    margin: 0 15px 80px 15px;
+    letter-spacing: 2;
+}
+
+.card img{
+    display: block;
+    width: 480px;
+    height: 360px;
 }
 
 .card-title{
-    font-weight: 200;
-    font-size: 30px;
+    font-weight: 250;
+    font-size: 36px;
+    font-family: "IBM Plex Sans", "Roboto";
+    line-height: 1.25;
+    letter-spacing: 0.1px;
+    margin-top: 16px;
+    padding-bottom: 10px;
 }
+
+.card b{  
+    font-size: larger;
+    font-family: "IBM Plex Sans";
+}
+
+.card-description{
+    font-size: 19px;
+    font-weight: 350;
+    font-family: "IBM Plex Sans";
+    line-height: 1.25;
+    margin-top: 30px;
+    margin-bottom: 9px;
+    padding-right: 5px ;
+    height: 200px;
+}
+
+.card button{
+    font-size: 19px;
+    font-weight: 300;
+    font-family: "IBM Plex Sans";
+    color: white;
+    background-color: #7a1655;
+    border: none;
+    width: 160px;
+    height: 50px;
+}
+
+.info-section{
+    text-align: center;
+    font-family: "IBM Plex Sans";
+    margin: 0 220px 85px 220px;
+}
+
+.info-section h2{
+    font-size: 72px;
+    font-weight: 300;
+    font-family: "IBM Plex Sans";
+    color:#840057;
+    margin-bottom: 38px;
+}
+
+.info-section p{
+    font-size: 29px;
+    font-weight: 300;
+    font-family: "IBM Plex Sans";
+    color: #131313;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+footer{
+    margin-bottom: 4px;
+    padding-left: 115px;
+    padding-top: 28px;
+    height: 110px;
+    background-color: #7a1655;
+    display: block ;
+}
+footer *{
+    font-family: "IBM Plex Sans";
+}
+
+footer p{
+    vertical-align: middle;
+    font-size: 19px;
+    font-weight: 250;
+    letter-spacing: 2;
+    color: white;
+}
+footer p:first-child{
+    font-family: "IBM Plex Sans";
+    font-size: 24px;
+    font-weight: 650;
+    letter-spacing: 1.8;
+}
+
