@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+.titlebar{
+    text-align: center;
+    color: #fff;
+    background-color: #145f94;
+    line-height: 87px;
+    height: 87px;
+}
+
+.channel-listing{
+    margin: 25px 126px 0 134px;
+}
+
+.main-heading{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.channel{
+    display: inline-block;
+    border: #145f94 solid 1px;
+    margin: 11px;
+}
+
+.channel-heading{
+    font-size: 22px;
+    font-weight: 550;
+    color: #fff;
+    background-color: #145f94;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 26px;
+}
+
+.channel-info{
+    font-size: 17px;
+    text-align: justify;
+    line-height: 1.45;
+    color: #151515;
+    background-color: #f6f6f6;
+    padding: 26px;
+}
+
+.left{
+    float: left;
+    width: 59.7%;
+    margin: 0.65%;
+}
+
+.right{
+    float: right;
+    width: 36.8%;
+    margin: 0.85% 1.2% 0.85% 0.75%;
+}
