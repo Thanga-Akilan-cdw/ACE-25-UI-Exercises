@@ -1,0 +1,18 @@
+
+body{
+    background-color: #2a2b30;
+    font-family: "Roboto";
+}
+
+.card-name{
+    color: #FFF;
+}
+
+.card-price{
+    color: #AAAAAA;
+}
+
+.card-button{
+    background-color: transparent;
+    color: #AAAAAA;
+}
