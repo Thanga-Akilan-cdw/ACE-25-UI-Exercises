@@ -6,7 +6,6 @@
 
 body{
     font-family: "Roboto";
-    margin: auto;
 }
 
 .titlebar{
@@ -17,9 +16,8 @@ body{
     height: 87px;
 }
 
-.main-section{
-    margin: 25px 130px 0;
-
+.channel-listing{
+    margin: 25px 126px 0 134px;
 }
 
 .main-heading{
@@ -54,12 +52,12 @@ body{
 
 .left{
     float: left;
-    width: calc( 61% - 1.5%);
-    margin: 0.75%;
+    width: 59.7%;
+    margin: 0.65%;
 }
 
 .right{
     float: right;
-    width: calc( 39% - 1.5%);
-    margin: 0.75%;
+    width: 36.8%;
+    margin: 0.85% 1.2% 0.85% 0.75%;
 }
