@@ -25,13 +25,13 @@ body{
     font-weight: 500;
 }
 
-.section{
+.channel{
     display: inline-block;
     border: #145f94 solid 1px;
     margin: 11px;
 }
 
-.section-heading{
+.channel-heading{
     font-size: 22px;
     font-weight: 550;
     color: #fff;
@@ -41,7 +41,7 @@ body{
     padding-left: 26px;
 }
 
-.section-info{
+.channel-info{
     font-size: 17px;
     text-align: justify;
     line-height: 1.45;
