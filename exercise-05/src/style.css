@@ -1,3 +1,14 @@
+
+/* 
+*  ==== Mobile First Approach with inclusion of tablets === *
+*/
+
+:root{
+    --background-color: #145f94;
+    --font-color: #fff;
+}
+
+/* Resetting defaults */
 *{
     margin: 0;
     padding: 0;
@@ -7,32 +18,67 @@
 body{
     font-family: "Roboto";
 }
-.channel{
-    display: inline-block;
-    border: #145f94 solid 1px;
+
+header{
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    padding: 5% 1%;
 }
 
-.channel-heading{
-    color: #fff;
-    background-color: #145f94;
+.main-heading{
+    font-size: 1.25em;
+    font-weight: 400;
 }
+
+main{
+    margin: 8% 7.3% 10% 7.76%;
+}
+
+/* Cards for each Channel */
+
+.channel{
+    display: inline-block;
+    margin: 5% 7%;
+    width: 86%;
+    border: var(--background-color) solid 1px;
+}
+
+
+.channel-heading{
+    position: sticky;
+    top: 0;
+    font-size: 1em;
+    font-weight: 550;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    height: 52px;
+    line-height: 52px;
+    padding-left: 26px;
+}
+
 
 .channel-info{
     text-align: justify;
     color: #151515;
     background-color: #f6f6f6;
+    font-size: .9em;
+    line-height: 1.45;
+    padding: 1em;
 }
 
-@media only screen and (min-width: 768px){
-    .titlebar{
+/*
+* ==== Styles For Desktop Devices === *
+*/
+
+@media only screen and (min-width: 769px){
+    header{
         text-align: center;
-        color: #fff;
-        background-color: #145f94;
-        line-height: 87px;
+        padding: 2%;
         height: 87px;
     }
     
-    .channel-listing{
+    main{
         margin: 25px 126px 0 134px;
     }
     
@@ -41,9 +87,10 @@ body{
         font-weight: 500;
     }
     
+    /* Cards for each Channel */
+
     .channel{
         display: inline-block;
-        border: #145f94 solid 1px;
         margin: .6em 11px .7em;
     }
     
@@ -72,44 +119,3 @@ body{
     }
 }
 
-
-@media only screen and (max-width: 767px){
-    .titlebar{
-        text-align: center;
-        color: #fff;
-        background-color: #145f94;
-        padding: 5% 1%;
-    }
-    
-    .main-heading{
-        font-size: 1.5em;
-        font-weight: 400;
-    }
-
-    .channel-listing{
-        margin: 8% 7.3% 10% 7.76%;
-    }
-    
-    .channel{
-        margin: 5% 7%;
-        width: 86%;
-    }
-    
-    .channel-heading{
-        position: sticky;
-        top: 0;
-        font-size: 22px;
-        font-weight: 550;
-        height: 52px;
-        line-height: 52px;
-        padding-left: 26px;
-    }
-    
-    .channel-info{
-        font-size: 1em;
-        line-height: 1.45;
-        padding: 1em;
-    }
-    
-}
-    
