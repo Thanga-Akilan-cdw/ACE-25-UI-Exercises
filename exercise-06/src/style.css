@@ -1,18 +1,163 @@
 
+:root{
+    --background-color: #2a2b30;
+    --primary-font-color: #fff;
+    --secondary-font-color: #AAAAAA
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: #2a2b30;
+    background-color: var(--background-color);
     font-family: "Roboto";
 }
 
+header{
+    margin: 4% 6.5% 3% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger{
+    position: relative;
+    background-color: #D8D8D8;
+    font-weight: 300;
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+}
+
+.dashboard{
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 0em;
+    background-color: #D8D8D8;
+    color: #000;
+    padding: 2em 2em .7em 1em;
+    width: 13em;
+
+}
+
+.dashboard span{
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main{
+    margin: 0 8% 11vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.85em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-thumbnail{
+    background-color: #24252A;
+    padding: 4%;
+    margin-bottom: 5%;
+    width: 19em;
+    height: 24.5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-star{
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+    scale: 1.5;
+    color: #87B180;
+}
+.card-image__type-1{
+    width: 11em;
+    height: 15em;
+}
+
+.card-image__type-2{
+    width: 15em;
+    height: 15em;
+}
+
+.card-type{
+    background-color: #87B180;
+    position: absolute;
+    top: 92%;
+    left: 75%;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    align-content: center;
+    text-align: center;
+}
+
+.card-type span{
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+
+}
+
+
 .card-name{
-    color: #FFF;
+    color: var(--primary-font-color);
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1.5%;
 }
 
 .card-price{
-    color: #AAAAAA;
+    color: var(--secondary-font-color);
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 1.5%;
 }
 
 .card-button{
     background-color: transparent;
-    color: #AAAAAA;
+    color: var(--secondary-font-color);
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    height: 2.5em;
+    width: 9em;
+    border: var(--secondary-font-color) 1px solid;
+    margin-top: .7em;
+    cursor: pointer;
+}
+
+footer{
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    gap: 5%;
+}
+
+footer li{
+    padding: 20px;
+    color: var(--primary-font-color);
+    font-size: x-large;
+    cursor: pointer;
 }
