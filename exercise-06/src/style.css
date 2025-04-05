@@ -17,89 +17,99 @@ body{
 }
 
 header{
-    margin: 4% 6.5% 3% 8%;
+    margin: 4.1rem 7.3rem 3.2% 8.25%;
     display: flex;
     justify-content: space-between;
+    height: 5.1rem;
+}
+
+header > img{
+    height: 4.3125rem;
+    width: 11.8125rem;
+    align-self: flex-end;
 }
 
 .hamburger{
     position: relative;
     background-color: #D8D8D8;
     font-weight: 300;
-    width: 66px;
-    height: 66px;
+    width: 67px;
+    height: 67px;
     border-radius: 33px;
 }
 
 .dashboard{
     position: absolute;
     z-index: 2;
-    top: 5em;
-    right: 0em;
-    background-color: #D8D8D8;
+    top: 5.25em;
+    right: -0.05em;
+    background-color: #EEEEEE;
     color: #000;
-    padding: 2em 2em .7em 1em;
-    width: 13em;
+    padding: 1.65em 0 .25em 1.65em;
+    width: 16.4rem;
 
 }
 
-.dashboard span{
+.dashboard li{
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 1.05em;
+    font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
 }
 
 main{
-    margin: 0 8% 11vh;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.85em;
+    margin: 0 0rem 11vh 7.45rem;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    margin: 0 1.485rem 3.25rem;
+    height: 34rem;
 }
 
 .card-thumbnail{
     background-color: #24252A;
     padding: 4%;
-    margin-bottom: 5%;
-    width: 19em;
-    height: 24.5em;
+    width: 20.4rem;
+    height: 25.75rem;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    align-content: center;
+    justify-items: center;
 }
 .fa-star{
     position: absolute;
     top: 1.5em;
-    right: 2em;
-    scale: 1.5;
+    right: 1.5em;
+    scale: 1.3;
     color: #87B180;
 }
-.card-image__type-1{
-    width: 11em;
-    height: 15em;
+
+
+.card-image-wrapper{    
+    position: relative;
+    height: 15.5em;
+    top: 0.3em;
+    right: 0.3em;
 }
 
-.card-image__type-2{
-    width: 15em;
-    height: 15em;
+.card-image{
+    height: 100%;
+    display: block;
+    justify-self: center;
 }
 
 .card-type{
     background-color: #87B180;
-    position: absolute;
-    top: 92%;
-    left: 75%;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    border-radius: 50%;
     align-content: center;
     text-align: center;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    bottom: -6.5%;
+    right: 7.25%;
 }
 
 .card-type span{
@@ -111,53 +121,60 @@ main{
 
 
 .card-name{
+    display: block;
     color: var(--primary-font-color);
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     font-weight: 300;
-    margin-bottom: 1.5%;
+    margin-top: 0.95rem;
 }
 
 .card-price{
+    display: block;
     color: var(--secondary-font-color);
     font-family: "Roboto",Arial, Helvetica, sans-serif;
     font-size: 1.3em;
-    font-weight: 300;
-    margin-bottom: 1.5%;
+    font-weight: 350;
+    margin-top: 0.2em;
 }
 
 .card-button{
+    display: block;
     background-color: transparent;
     color: var(--secondary-font-color);
     font-family: "Roboto",Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    height: 2.5em;
+    font-size: 1.01em;
+    font-weight: 500;
+    height: 2.6em;
     width: 9em;
     border: var(--secondary-font-color) 1px solid;
-    margin-top: .7em;
+    margin-top: .85em;
     cursor: pointer;
 }
 
 footer{
-    height: 10vh;
     width: 100%;
     position: fixed;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
 }
 
 footer ul{
+    height: 11vh;
     list-style-type: none;
-    display: flex;
-    gap: 5%;
+    text-align: center;
+    display: block;
+    align-content: center;
 }
 
 footer li{
-    padding: 20px;
+    display: inline-block;
+    padding: 25px;
     color: var(--primary-font-color);
     font-size: x-large;
     cursor: pointer;
+}
+
+.footer-end{
+    height: 5px;
+    background-color: #FFF;
 }
