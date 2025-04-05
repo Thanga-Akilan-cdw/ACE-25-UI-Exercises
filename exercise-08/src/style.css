@@ -1,0 +1,29 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+
+main{
+    background-image: url(../public/background-image.png);
+    background-size: cover;
+    color: #FFF;
+    height: 100%;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content{
+    /* display: none; */
+}
+
