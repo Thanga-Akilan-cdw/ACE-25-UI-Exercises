@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-10 Section - 2 </title>
+</head>
+<body>
+    <h1>Exercise - 10 Section - 2</h1>
+    <script>
+        let players = ["Akil","Hari","Muruga","Saran","Saro","Prasanth","Mike","Beni","Rishi","Aurum","Ram"]
+
+        console.log(`${players.shift} is removed due to injury`)
+        console.log(`The number of players is ${players.length}`)
+
+        players.push("Dhoni")
+
+        console.log("Team Players and Jersey number : ")
+        for(let iterator = 0; iterator < players.length; iterator++){
+            console.log(`${players[iterator]} - ${iterator+1}`);
+        }
+
+        let playersForJersey= [];
+
+        for(let iterator = 0; iterator < players.length; iterator++){
+            playersForJersey.push({"name": players[iterator].toUpperCase(), "jerseyNumber":iterator+1});
+        }
+
+
+
+        console.log("Team Players and Jersey number : ")
+        for(let iterator = 0; iterator < playersForJersey.length; iterator++){
+            console.log(`${playersForJersey[iterator].name} - ${playersForJersey[iterator].jerseyNumber}`);
+        }
+    </script>
+</body>
+</html>

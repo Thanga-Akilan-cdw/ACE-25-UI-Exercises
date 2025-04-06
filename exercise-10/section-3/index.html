@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-10 Section-3</title>
+</head>
+<body>
+    <h1>Exercise-10 Section-3</h1>
+    <script>
+        displayNumbersTill100()
+        displayTodaysDate()
+        console.log(convertToFahrenheit(100));
+        console.log(getAverage([1,2,3,4]))
+        console.log(reverseString("hello"))
+
+
+        function displayNumbersTill100(){
+            let count = 1;
+            while(count <= 100 ){
+                console.log(count++);
+            }
+        }
+
+        function displayTodaysDate(){
+            let today = new Date();
+            let formattedDate = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`
+            console.log(`Today's Date : ${formattedDate}`);
+        }
+
+        function convertToFahrenheit(celsius){
+            return (celsius*1.8)+32;
+        }
+
+        function getAverage(array){
+            let sum = 0;
+            for(let value of array){
+                sum += value;
+            }
+            return sum/array.length;
+        }
+        function reverseString(originalString){
+            let reversedString = "";
+            for(let letter of originalString){
+                reversedString[reversedString.length+1]= letter;
+            }
+            return("Reversed String : "+ reversedString);
+        }
+
+    </script>
+</body>
+</html>
