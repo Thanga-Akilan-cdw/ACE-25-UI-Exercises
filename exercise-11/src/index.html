@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- External Stylesheet -->
+     <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <main>
+        <div>
+            <input type="number" >
+            <button id="add-button">+</button>
+            <button id="subtract-button">-</button>
+            <button id="multiply-button">x</button>
+            <button id="divide-button">/</button>
+        </div>
+    </main>
+    <script>
+        let Calculator = {
+            add       : function(a,b){ return (a+b);},
+            subtract  : function(a,b){ return (a-b);},
+            multiply  : function(a,b){ return (a*b);},
+            divide    : function(a,b){ return (a/b);},
+        }
+    </script>
+</body>
+</html>
