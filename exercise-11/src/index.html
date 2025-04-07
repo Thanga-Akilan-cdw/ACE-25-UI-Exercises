@@ -33,54 +33,7 @@
             </div>
         </div>
     </main>
-    <script>
-        let calculator = {
-            operand1  : "",
-            operator  : "",
-            operand2  : "",
-            add       : function(){ return (calculator.operand1 + calculator.operand2);},
-            subtract  : function(){ return (calculator.operand1 - calculator.operand2);},
-            multiply  : function(){ return (calculator.operand1 * calculator.operand2);},
-            divide    : function(){ return (calculator.operand1 / calculator.operand2);},
-        }
-
-        function appendCharacter(character){
-            let displayBox = document.getElementById("display-box");
-            displayBox.value = displayBox.value + "" + character;
-            calculator.operand2 = parseFloat(calculator.operand2 + "" +character)
-        }
-
-        function setOperand1(){
-            let displayBox = document.getElementById("display-box");
-            calculator.operand1 = parseFloat(displayBox.value);
-        }
-        function loadOperator(operator){
-            setOperand1();
-            appendCharacter(operator);
-            calculator.operator = operator;
-            calculator.operand2 = "";
-        }
-
-        function computeResult(){
-            let displayBox = document.getElementById("display-box");
-            switch(calculator.operator){
-                case '+':
-                    displayBox.value = calculator.add();
-                    break;
-                case '-':
-                    displayBox.value = calculator.subtract();
-                    break;
-                case 'x':
-                    displayBox.value = calculator.multiply();
-                    break;
-                case '/':
-                    displayBox.value = calculator.divide();
-                    break;
-
-            }
-            console.log(calculator)
-        }
-
+    <script src="calculator.js">
     </script>
 </body>
 </html>
