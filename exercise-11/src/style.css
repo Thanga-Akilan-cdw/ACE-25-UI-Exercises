@@ -16,14 +16,14 @@ header{
     margin-top: 8rem;
 }
 
-.calculator-content{
-    margin-top: 5rem;
-}
+
+
 
 .display-box{
     font-size: 1.5em;
     height: 4rem;
     width: 40rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     padding-left: 2rem;
     border: 2px solid #000;
