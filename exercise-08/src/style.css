@@ -7,7 +7,8 @@
 }
 
 body{
-    height: 100vh;
+    height: 98vh;
+    font-family: sans-serif, Arial, Helvetica;
 }
 
 
@@ -16,14 +17,96 @@ main{
     background-size: cover;
     color: #FFF;
     height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.main-heading{
+    font-size: 4.6rem;
+    width: 100%;
+    position: absolute;
+    top: 3rem;
+}
+
+.sub-heading{
+    font-size: 2.2rem;
+    font-weight: 600;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 11rem;
+    right: -6.2rem;
+
+}
+
+.sub-heading_highlight{
+    font-size: 7.5rem;
+    font-weight: 600;
+}
+
+.motto-heading{
+    font-size: 6.65rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 2.25rem;
+    left: 34rem;
+
+}
+
+.motto-heading_highlight{
+    font-size: 8.85rem;
+    line-height: 1.1;
 }
 
 .dashboard{
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 2.75rem;
+    padding: 2em 2.1rem;
+    background: #000;
+    z-index: 1;
+}
+
+.fa-bars{
+    font-size: 1.75rem;
+}
+
+.dashboard:hover{
+    .dashboard-content{
+        display: block;
+    }
 }
 
 .dashboard-content{
-    /* display: none; */
+    display:none;
+    position: absolute;    
+    top: 5.75rem;
+    left: 0;
+    width: 16.9rem;
+    background-color: #000;
+    padding: 2rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+.dashboard-content ul{
+    list-style: none;
+}
+
+.dashboard-element{
+    margin: 1.6575em;
+}
+
+.social-icons{
+    margin: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    margin-left: 0.5em;
+}
+
+.fa-twitter{
+    font-size: 2.35rem;
 }
 
