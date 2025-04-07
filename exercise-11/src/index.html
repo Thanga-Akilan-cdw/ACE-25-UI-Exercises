@@ -12,21 +12,75 @@
         <h1>Calculator</h1>
     </header>
     <main>
-        <div>
-            <input type="number" >
-            <button id="add-button">+</button>
-            <button id="subtract-button">-</button>
-            <button id="multiply-button">x</button>
-            <button id="divide-button">/</button>
+        <div class="calculator-content">
+            <input class="display-box" id="display-box" type="text" readonly>
+            <div class="input-elements">
+                <button class="input-btn" onclick=appendCharacter(9)>9</button>
+                <button class="input-btn" onclick=appendCharacter(8)>8</button>
+                <button class="input-btn" onclick=appendCharacter(7)>7</button>
+                <button class="input-btn" onclick=appendCharacter(6)>6</button>
+                <button class="input-btn" onclick=appendCharacter(5)>5</button>
+                <button class="input-btn" onclick=appendCharacter(4)>4</button>
+                <button class="input-btn" onclick=appendCharacter(3)>3</button>
+                <button class="input-btn" onclick=appendCharacter(2)>2</button>
+                <button class="input-btn" onclick=appendCharacter(1)>1</button>
+                <button class="input-btn"  onclick=loadOperator('+')>+</button>
+                <button class="input-btn" onclick=appendCharacter(0)>0</button>
+                <button class="input-btn"  onclick=loadOperator('-')>-</button>
+                <button class="input-btn"  onclick=loadOperator('x') >x</button>
+                <button class="input-btn"  onclick=loadOperator('/') >/</button>
+                <button class="input-btn"  onclick=computeResult()>=</button>
+            </div>
         </div>
     </main>
     <script>
-        let Calculator = {
-            add       : function(a,b){ return (a+b);},
-            subtract  : function(a,b){ return (a-b);},
-            multiply  : function(a,b){ return (a*b);},
-            divide    : function(a,b){ return (a/b);},
+        let calculator = {
+            operand1  : "",
+            operator  : "",
+            operand2  : "",
+            add       : function(){ return (calculator.operand1 + calculator.operand2);},
+            subtract  : function(){ return (calculator.operand1 - calculator.operand2);},
+            multiply  : function(){ return (calculator.operand1 * calculator.operand2);},
+            divide    : function(){ return (calculator.operand1 / calculator.operand2);},
         }
+
+        function appendCharacter(character){
+            let displayBox = document.getElementById("display-box");
+            displayBox.value = displayBox.value + "" + character;
+            calculator.operand2 = parseFloat(calculator.operand2 + "" +character)
+        }
+
+        function setOperand1(){
+            let displayBox = document.getElementById("display-box");
+            calculator.operand1 = parseFloat(displayBox.value);
+        }
+        function loadOperator(operator){
+            setOperand1();
+            appendCharacter(operator);
+            calculator.operator = operator;
+            calculator.operand2 = "";
+        }
+
+        function computeResult(){
+            let displayBox = document.getElementById("display-box");
+            switch(calculator.operator){
+                case '+':
+                    displayBox.value = calculator.add();
+                    break;
+                case '-':
+                    displayBox.value = calculator.subtract();
+                    break;
+                case 'x':
+                    displayBox.value = calculator.multiply();
+                    break;
+                case '/':
+                    displayBox.value = calculator.divide();
+                    break;
+
+            }
+            console.log(calculator)
+        }
+
     </script>
 </body>
 </html>
