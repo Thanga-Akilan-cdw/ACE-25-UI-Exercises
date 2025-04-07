@@ -36,7 +36,7 @@ header > img{
     width: 67px;
     height: 67px;
     border-radius: 33px;
-    padding: 1.4em;
+    padding: 1.3em 0 1.3em 1.4em;
     cursor: pointer;
 }
 
@@ -46,7 +46,7 @@ header > img{
     }
 }
 
-.fa-bars{
+.fa-user{
     font-size: 1.5rem;
 }
 
