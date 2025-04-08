@@ -23,16 +23,17 @@ header{
     text-align: center;
     color: var(--font-color);
     background-color: var(--background-color);
+    width: 100%;
     padding: 5% 1%;
 }
 
 .main-heading{
-    font-size: 1.25em;
+    font-size: 1.45rem;
     font-weight: 400;
 }
 
 main{
-    margin: 8% 7.3% 10% 7.76%;
+    margin: 2rem 1rem 2rem 1rem;
 }
 
 /* Cards for each Channel */
@@ -48,13 +49,13 @@ main{
 .channel-heading{
     position: sticky;
     top: 0;
-    font-size: 1em;
+    font-size: 1.35em;
     font-weight: 550;
     color: var(--font-color);
     background-color: var(--background-color);
-    height: 52px;
-    line-height: 52px;
-    padding-left: 26px;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding-left: 1.5rem;
 }
 
 
@@ -62,60 +63,64 @@ main{
     text-align: justify;
     color: #151515;
     background-color: #f6f6f6;
-    font-size: .9em;
+    font-size: 1.2em;
     line-height: 1.45;
     padding: 1em;
 }
+
+.left, .right{
+    width: 90%;
+    margin: auto;
+
+}
+
 
 /*
 * ==== Styles For Desktop Devices === *
 */
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 821px){
     header{
         text-align: center;
-        padding: 2%;
-        height: 87px;
+        padding: 1.95rem;
     }
     
     main{
-        margin: 25px 126px 0 134px;
+        margin: 1.75rem 9.6rem 0 8.35rem;
     }
     
     .main-heading{
-        font-size: 22px;
+        font-size: 1.25rem;
         font-weight: 500;
     }
     
     /* Cards for each Channel */
 
     .channel{
-        display: inline-block;
-        margin: .6em 11px .7em;
+        margin: .6em .6875rem .7em;
+        width: 100%;
     }
     
     .channel-heading{
-        font-size: 22px;
-        font-weight: 550;
-        height: 56px;
-        line-height: 52px;
-        padding-left: 26px;
+        font-size: 1.25rem;
     }
     
     .channel-info{
-        font-size: 17px;
+        font-size: 1.05rem;
         line-height: 1.55em;
-        padding: 22px 22px 20px 25px;
+        padding: 1.375rem 1.375rem 1.25rem 1.562rem;
     }
     
     .left{
         float: left;
-        width: 61.1%;
+        width: 54.75rem;
+
     }
     
     .right{
         float: right;
-        width: 38.7%;
+        width: 34rem;
+
     }
 }
 
