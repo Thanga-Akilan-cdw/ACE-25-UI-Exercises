@@ -9,7 +9,7 @@
 
 body{
     background-color:  var(--background-color);
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     margin: 0 4.5%;
 }
@@ -27,9 +27,13 @@ header{
 }
 
 .main-heading{
-    font-size: 3.3em;
+    font-size: 3.2em;
     font-weight: 200;
     letter-spacing: 0.75px;
+}
+
+.main-heading_highlight{
+    font-weight: 400;
 }
 
 .sub-heading{
@@ -186,6 +190,8 @@ footer{
     font-weight: 500;
 }
 
+
+/* === Desktop Stylesheet === */
 @media screen and (min-width: 768px) {
 
     body{
@@ -216,7 +222,7 @@ footer{
     }
 
     .image-container{
-        margin-top: 3.45em;
+        margin-top: 3.375em;
         display: flex;
         flex-wrap: wrap;
         gap: 1.2em 2.2em;
