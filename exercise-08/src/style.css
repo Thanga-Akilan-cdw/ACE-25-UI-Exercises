@@ -84,7 +84,7 @@ main{
 
 .dashboard:hover .dashboard-content{
     left: 0;
-    transition: left 5s;
+    transition: left 3s;
 }
 
 .dashboard-image{
@@ -114,6 +114,7 @@ main{
 .dashboard-element{
     margin: 1.35em 1.35em 1.55em ;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .social-icons{
@@ -127,6 +128,7 @@ main{
 .fa-brands{
     font-size: 2rem;
     margin-left: 0.5em;
+    cursor: pointer;
 }
 
 .fa-twitter{
