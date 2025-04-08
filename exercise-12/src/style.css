@@ -30,6 +30,7 @@ header{
     display: inline;
     font-size: 1.25rem;
     letter-spacing: 1px;
+    color: #000;
 }
 
 main{
@@ -51,6 +52,7 @@ main{
 
 .shapes-container{
     display: flex;
+    gap: 5rem;
     margin: 6.5rem 0 5.55rem;
 }
 
@@ -73,6 +75,14 @@ main{
     width: 9.7rem;
     height: 9.7rem;
     background-color: #E0E0E0;
+}
+
+.tick{
+    width: 80px;
+    height: 30px;
+    transform: rotate(-55deg) translate(-0.5rem,4rem);
+    border-bottom: 2px solid #FFF;
+    border-left: 2px solid #FFF;
 }
 
 .next-button{
