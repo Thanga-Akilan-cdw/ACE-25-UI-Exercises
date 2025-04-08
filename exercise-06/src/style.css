@@ -1,10 +1,11 @@
-
+/* Declaring Variables  */
 :root{
     --background-color: #2a2b30;
     --primary-font-color: #fff;
     --secondary-font-color: #AAAAAA
 }
 
+/* Resetting Defaults  */
 *{
     margin: 0;
     padding: 0;
@@ -13,35 +14,37 @@
 
 body{
     background-color: var(--background-color);
-    font-family: "Roboto";
+    font-family: "Roboto",Arial, Helvetica;
 }
 
 header{
-    margin: 4.1rem 7.3rem 3.2% 8.25%;
-    display: flex;
-    justify-content: space-between;
+    margin: 4.875rem 7.3rem 2.7rem 8.95rem;
     height: 5.1rem;
 }
 
 header > img{
     height: 4.3125rem;
     width: 11.8125rem;
-    align-self: flex-end;
 }
 
 .hamburger{
+    display: inline-block;
     position: relative;
     background-color: #D8D8D8;
     font-weight: 300;
-    width: 67px;
-    height: 67px;
-    border-radius: 33px;
+    width: 4.1875rem;
+    height: 4.1875rem;
+    border-radius: 50%;
     padding: 1.3em 0 1.3em 1.4em;
+    margin-left: 87.5rem;
+    top: -5.35rem;
     cursor: pointer;
 }
 
+/* === Dashboard === */
+
 .hamburger:hover{
-    .dashboard{
+    .dashboard-wrapper{
         display: block;
     }
 }
@@ -50,31 +53,36 @@ header > img{
     font-size: 1.5rem;
 }
 
-
-.dashboard{
-    display: none;
+.dashboard-wrapper{
     position: absolute;
     z-index: 1;
-    top: 5.25em;
+    top: 3.25em;
     right: -0.05em;
-    background-color: #EEEEEE;
-    color: #000;
-    padding: 1.65em 0 .25em 1.65em;
-    width: 16.3rem;
+    padding-top: 2rem;
+    display: none;
+}
 
+.dashboard{
+    background-color: #EEEEEE;
+    color: #1C1C1C;
+    padding: 1.10em 0 0.1em 1.65em;
+    width: 16.3rem;
 }
 
 .dashboard li{
-    display: block;
-    margin-bottom: 1.05em;
+    margin-top: 0.55rem;
+    margin-bottom: 1.1em;
     font-size: 1.05rem;
     font-weight: 700;
+    list-style: none;
     cursor: pointer;
 }
 
 main{
-    margin: 0 0rem 11vh 7.45rem;
+    margin: 0 0rem 5.12rem 7.45rem;
 }
+
+/*  === Card Styles === */
 
 .card{
     display: inline-block;
@@ -84,17 +92,16 @@ main{
 
 .card-thumbnail{
     background-color: #24252A;
-    padding: 4%;
+    padding: 4rem;
     width: 20.4rem;
-    height: 25.75rem;
+    height: 25.7rem;
     position: relative;
-    display: block;
     align-content: center;
-    justify-items: center;
 }
+
 .fa-star{
     position: absolute;
-    top: 1.5em;
+    top: 1.45em;
     right: 1.5em;
     scale: 1.3;
     color: #87B180;
@@ -117,53 +124,57 @@ main{
 .card-type{
     background-color: #87B180;
     border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    bottom: -6.8%;
+    right: 1.4rem;
     align-content: center;
     text-align: center;
-    width: 56px;
-    height: 56px;
-    position: absolute;
-    bottom: -6.5%;
-    right: 7.25%;
 }
 
-.card-type span{
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+.card-type p{
+    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.5em;
     font-weight: 600;
-
+    padding-top: 0.1875rem;
+    padding-right: 0.0625rem;
 }
 
 
 .card-name{
-    display: block;
     color: var(--primary-font-color);
     font-size: 1.5em;
-    font-weight: 300;
-    margin-top: 0.95rem;
+    font-weight: 325;
+    margin-top: 0.875rem;
 }
 
 .card-price{
-    display: block;
     color: var(--secondary-font-color);
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.3em;
     font-weight: 350;
-    margin-top: 0.2em;
+    margin-top: 0.175em;
+}
+
+.currency-symbol{
+    font-weight: 250;
 }
 
 .card-button{
-    display: block;
     background-color: transparent;
     color: var(--secondary-font-color);
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.01em;
     font-weight: 500;
-    height: 2.6em;
+    height: 2.65em;
     width: 9em;
-    border: var(--secondary-font-color) 1px solid;
+    border: #919191 1px solid;
     margin-top: .85em;
     cursor: pointer;
 }
+
+/* === Footer Styles === */
 
 footer{
     width: 100%;
@@ -173,18 +184,17 @@ footer{
 }
 
 footer ul{
-    height: 11vh;
+    height: 6.8rem;
     list-style-type: none;
     text-align: center;
-    display: block;
     align-content: center;
 }
 
 footer li{
     display: inline-block;
-    padding: 25px;
+    padding: 1.5625rem;
     color: var(--primary-font-color);
-    font-size: x-large;
+    font-size: 1.5rem;
     cursor: pointer;
+    padding: 0 1.85rem;
 }
-
