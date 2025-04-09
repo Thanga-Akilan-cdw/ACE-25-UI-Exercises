@@ -1,0 +1,102 @@
+/* Resetting defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Heading  */
+
+main{
+    background-image: url(../public/background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    color: #fff;
+    font-size: 5rem;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+/*   Cloud Animation */
+
+.cloud1{
+    position: absolute;
+    top: 5em;
+    right: 0;
+    scale: 2.5;
+    animation: cloudMovement 30s linear 0s 4;
+}
+
+.cloud2{
+    position: absolute;
+    top: 10em;
+    right: -25em;
+    animation: cloudMovement 30s linear 1s 4;
+}
+
+@keyframes cloudMovement{
+    to{
+        right: 100%;
+    }
+}
+
+/*  Green Bike Animation */
+
+.greenBike{
+    position: absolute;
+    bottom: 9rem;
+    left: -15em;
+    animation: greenBikeMovement 20s linear 1s 4;
+    height: 10rem;
+    width: 10rem;
+}
+
+@keyframes greenBikeMovement{
+    0%{
+        display: inline;
+        left: -2em;
+    }
+    30%{
+        left: 30%;
+        bottom: 13rem;
+    }
+    60%{
+        left: 60%;
+    }
+    100% {
+        left: 100%;
+        bottom: 13rem;
+    }
+}
+
+
+/*  Red Bike Animation */
+
+.redBike{
+    position: absolute;
+    bottom: 9rem;
+    right: 2rem;
+    animation: redBikeMovement 20s linear 0s 2 normal forwards;
+    height: 10rem;
+    width: 10rem;
+}
+
+@keyframes redBikeMovement{
+    0%{
+        right: 0
+    }
+    30%{
+        right: 30%;
+    }
+    60%{
+        right: 60%;
+    }
+    100% {
+        right: 100%;
+    }
+}
