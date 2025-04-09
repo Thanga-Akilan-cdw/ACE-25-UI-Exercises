@@ -1,17 +1,20 @@
+
+/* Declaring Variables */
 :root{
     --background-color: #000000;
 }
 
+/* Resetting defaults  */
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color:  var(--background-color);
     font-family: "Roboto Condensed",Arial, Helvetica;
     color: #FFFFFF;
-    margin: 0 4.5%;
+    background-color:  var(--background-color);
+    margin: 0 1.25rem;
 }
 
 header{
@@ -19,7 +22,7 @@ header{
 }
 
 .title-container{
-    padding: 15em 0 6.8em; 
+    padding: 14.75em 0 6.65em; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +32,7 @@ header{
 .main-heading{
     font-size: 3.2em;
     font-weight: 200;
-    letter-spacing: 1px;
+    letter-spacing: 0.2rem;
 }
 
 .main-heading_highlight{
@@ -37,10 +40,11 @@ header{
 }
 
 .sub-heading{
-    padding-top: .67em;
-    font-size: 2em;
     color: #CECECE;
-    font-weight: 600; 
+    font-size: 2.05em;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    padding-top: .57em;
 }
 
 .sub-heading span{
@@ -48,8 +52,8 @@ header{
 }
 
 .mail-contact{
-    padding-top: .9em;
-    font-size: 1em;
+    padding-top: .5em;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -62,35 +66,15 @@ header{
     margin-bottom: 1em;
 }
 
+
 .logo-container{
     text-align: center;
-    padding: 4.2em 0 0;
+    padding: 3.85em 0 0;
 }
 
-.logo-content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 3.2em 0 0;
-    margin-bottom: 8.55em;
-    align-items: baseline;
-}
-
-.logo-content__left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-.logo-content__right{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
 
 .logo-header{
-    font-size: 1.95em;
+    font-size: 2.15em;
     font-weight: 600;
     color: #CECECE;
 }
@@ -99,41 +83,53 @@ header{
     color: #b8e887;
 }
 
-.logo{
-    margin: 2em;
+.logo-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.2em 0 0;
+    margin: 0 1rem 5.5em;
 }
 
-.logo[alt="Spotify"]{ 
-    max-width: 7em;
+.logo-wrapper{
+    width: 9.5rem;
+    height: auto;
+
+}
+
+.logo{
+    width: 80%;
     height: max-content;
+    margin: 1.5rem 0 4rem;
+}
+
+.left-logo{
+    margin-right: 1.5rem;
+}
+
+.right-logo{
+    margin-left: 2rem;
+}
+
+.logo[alt="Spotify"]{
+    width: 6.5rem;
+}
+
+
+.logo[alt="Adidas"]{
+    width: 4rem;
 }
 
 .logo[alt="Audi"]{
-    max-width: 6em;
-    height: max-content;
-    margin-right: 2.5em;
+    width: 5.5rem;
 }
-.logo[alt="Adidas"]{
-    max-width: 3.9em;
-    height: max-content;
-    margin-top: 3.6em;
-    margin-left: 3.5em;
-}
-.logo[alt="Lufthansa"]{
-    max-width: 8em;
-    height: max-content;
-    padding: 1.9em 0 .5em;
-    margin: 3em 1.5em 2em 0;
 
-}
 .logo[alt="IKEA"]{
-    max-width: 6.95em;
-    height: max-content;
+    width: 7rem;
 }
 .logo[alt="Mont Blanc"]{
-    max-width: 5.5em;
-    height: max-content;
-    margin: 2.625em 2.65em 2em 0;
+    width: 5.5rem;
 }
 
 footer{
@@ -142,7 +138,7 @@ footer{
 
 .footer-content{
     display: flex;
-    gap: 5.5%;
+    gap: 1.1rem;
     justify-content: center;
     width: 100%;
     margin-top: 3em;
@@ -152,40 +148,24 @@ footer{
     flex-basis: 2em;
 }
 
-.fa-brands, .medium-logo{
+.fa-brands{
     font-size: 2em;
     border-radius: 50%;
     border: 1px solid #FFF;
+    padding: 0.75rem 0.8rem;
 }
 
 .fa-facebook-f{
-    padding: 0.7rem 1rem;
+    padding: 0.75rem 1.1rem;
 }
 
-.fa-twitter, .fa-dribbble{
-    padding: 0.6rem 0.6rem;
-}
-
-.fa-instagram{
-    padding: 0.6rem 0.75rem;
-}
-
-
-.medium-logo{
-    width: 3rem;
-    height: 3rem;
-}
-
-
-.medium-logo > img{
-    width: 80%;
-    margin: 10%;
-    border-radius: 50%;
+.fa-medium{
+    padding: 0.75rem 0.55rem;
 }
 
 .footer-note{
     display: block;
-    margin: 3em 0 2.6em;
+    margin: 2.5em 0 2.05em;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -195,7 +175,7 @@ footer{
 @media screen and (min-width: 768px) {
 
     body{
-        margin: 4.15rem 11.25rem;
+        margin: 4.15rem 10.5rem 4.15rem 11.25rem;
     }
     header{
         font-size: 1.775rem;
@@ -206,6 +186,7 @@ footer{
 
     .main-heading{
         font-size: 10.85em;
+        font-weight: 300;
         letter-spacing: -1px;
     }
 
@@ -222,14 +203,14 @@ footer{
     }
 
     .image-container{
-        margin-top: 3.15em;
         display: flex;
         flex-wrap: wrap;
-        gap: 1.2em 2.0925rem;
+        gap: 1.2em 2.2rem;
+        margin-top: 3.15em;
     }
 
     .image-container img{
-        width: 27.105rem;
+        width: 27.05rem;
     }
 
     .logo-container{
@@ -242,7 +223,7 @@ footer{
 
     .logo-content{
         margin: 0 1em 16.25em 1em;
-        padding-top: 2.5rem;
+        padding-top: 7rem;
     }
 
     .logo{
