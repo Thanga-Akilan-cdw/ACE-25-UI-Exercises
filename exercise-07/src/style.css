@@ -17,9 +17,7 @@ body{
     margin: 0 1.25rem;
 }
 
-header{
-    display: none;
-}
+/* Introduction Section */
 
 .title-container{
     padding: 14.75em 0 6.65em; 
@@ -30,7 +28,7 @@ header{
 }
 
 .main-heading{
-    font-size: 3.2em;
+    font-size: 3.2rem;
     font-weight: 200;
     letter-spacing: 0.2rem;
 }
@@ -57,6 +55,9 @@ header{
     font-weight: 600;
 }
 
+
+/* Image Section */
+
 .image-container{
     width: 100% 
 }
@@ -66,6 +67,7 @@ header{
     margin-bottom: 1em;
 }
 
+/* Brands Section */
 
 .logo-container{
     text-align: center;
@@ -132,6 +134,8 @@ header{
     width: 5.5rem;
 }
 
+/* Socials Section */
+
 footer{
     text-align: center;
 }
@@ -156,11 +160,13 @@ footer{
 }
 
 .fa-facebook-f{
-    padding: 0.75rem 1.1rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
 }
 
 .fa-medium{
-    padding: 0.75rem 0.55rem;
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
 }
 
 .footer-note{
@@ -175,9 +181,12 @@ footer{
 @media screen and (min-width: 768px) {
 
     body{
-        margin: 4.15rem 10.5rem 4.15rem 11.25rem;
+        margin: 4.15rem 11.2rem 4.15rem 11.25rem;
     }
-    header{
+
+    /* Introduction Section */
+
+    .mail-contact_desktop{
         font-size: 1.775rem;
         font-weight: 600;
         display: flex;
@@ -202,6 +211,8 @@ footer{
         display: none;
     }
 
+    /* Image Section */
+
     .image-container{
         display: flex;
         flex-wrap: wrap;
@@ -212,6 +223,8 @@ footer{
     .image-container img{
         width: 27.05rem;
     }
+
+    /* Brands Section */
 
     .logo-container{
         padding-top: 8.515rem;
@@ -243,6 +256,8 @@ footer{
     logo[alt="Mont Blanc"]{
         margin-left: 2.55em;
     }
+
+    /* Socials Section */
 
     .footer-content{
         gap: 1.25%;
