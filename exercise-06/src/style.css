@@ -30,14 +30,14 @@ header > img{
 .hamburger{
     display: inline-block;
     position: relative;
+    top: -5.35rem;
     background-color: #D8D8D8;
     font-weight: 300;
     width: 4.1875rem;
     height: 4.1875rem;
-    border-radius: 50%;
+    border-radius: 2.094rem;
     padding: 1.3em 0 1.3em 1.4em;
     margin-left: 87.5rem;
-    top: -5.35rem;
     cursor: pointer;
 }
 
@@ -54,12 +54,12 @@ header > img{
 }
 
 .dashboard-wrapper{
+    display: block;
     position: absolute;
     z-index: 1;
     top: 3.25em;
     right: -0.05em;
     padding-top: 2rem;
-    display: none;
 }
 
 .dashboard{
@@ -70,12 +70,12 @@ header > img{
 }
 
 .dashboard li{
-    margin-top: 0.55rem;
-    margin-bottom: 1.1em;
     font-size: 1.05rem;
     font-weight: 700;
     list-style: none;
     cursor: pointer;
+    margin-top: 0.55rem;
+    margin-bottom: 1.1em;
 }
 
 main{
@@ -91,12 +91,12 @@ main{
 }
 
 .card-thumbnail{
+    position: relative;
+    align-content: center;
     background-color: #24252A;
     padding: 4rem;
     width: 20.4rem;
     height: 25.7rem;
-    position: relative;
-    align-content: center;
 }
 
 .fa-star{
@@ -110,27 +110,27 @@ main{
 
 .card-image-wrapper{    
     position: relative;
-    height: 15.5em;
     top: 0.3em;
     right: 0.3em;
+    height: 15.5em;
 }
 
 .card-image{
-    height: 100%;
     display: block;
     justify-self: center;
+    height: 100%;
 }
 
 .card-type{
-    background-color: #87B180;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
     position: absolute;
     bottom: -6.8%;
     right: 1.4rem;
     align-content: center;
     text-align: center;
+    background-color: #87B180;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .card-type p{
@@ -177,24 +177,24 @@ main{
 /* === Footer Styles === */
 
 footer{
-    width: 100%;
     position: fixed;
     bottom: 0;
     background-color: #000;
+    width: 100%;
 }
 
 footer ul{
-    height: 6.8rem;
-    list-style-type: none;
-    text-align: center;
+    justify-self: center;
     align-content: center;
+    list-style-type: none;
+    height: 6.8rem;
 }
 
 footer li{
     display: inline-block;
-    padding: 1.5625rem;
     color: var(--primary-font-color);
     font-size: 1.5rem;
+    font-weight: 450;
     cursor: pointer;
-    padding: 0 1.85rem;
+    padding: 0.25rem 1.85rem;
 }
