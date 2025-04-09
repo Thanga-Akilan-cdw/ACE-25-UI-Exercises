@@ -1,5 +1,9 @@
 
+:root{
+    --background-color: #000;
+}
 
+/* Resetting Defaults  */
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +25,7 @@ main{
     text-align: center;
 }
 
+/* Overlay for background */
 .overlay{
     position: absolute;
     top: 0;
@@ -30,22 +35,27 @@ main{
     background-color: rgba(0,0,0,0.25);
     z-index: 1;
 }
-.main-heading{
-    font-size: 4.6rem;
-    width: 100%;
+
+.overlay-text{
     position: absolute;
-    top: 3rem;
     z-index: 2;
 }
 
+/* Heading Text Styling */
+
+.main-heading{
+    font-size: 4.6rem;
+    width: 100%;
+    top: 3.2rem;
+    scale: 1 1.15;
+}
+
 .sub-heading{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     transform: rotate(-90deg);
-    position: absolute;
     top: 11rem;
-    right: -6.2rem;
-    z-index: 2;
+    right: -6.6rem;
 
 }
 
@@ -57,11 +67,10 @@ main{
 .motto-heading{
     font-size: 6.65rem;
     font-weight: 600;
-    position: absolute;
-    bottom: 2.25rem;
+    bottom: 2.9rem;
     left: 34rem;
-    z-index: 2;
-
+    line-height: 5rem;
+    scale: 1 1.1;
 }
 
 .motto-heading_highlight{
@@ -69,17 +78,20 @@ main{
     line-height: 1.1;
 }
 
+/* Dashboard Styles */
+
 .dashboard{
     position: absolute;
     top: 2.75rem;
     padding: 2em 2.05rem;
-    background: #000;
+    background: var(--background-color);
     z-index: 3;
     cursor: pointer;
 }
 
 .fa-bars{
     font-size: 1.75rem;
+    scale: 1.5 1;
 }
 
 .dashboard:hover .dashboard-content{
@@ -100,7 +112,7 @@ main{
     top: 5.65rem;
     width: 16.9rem;
     white-space: nowrap;
-    background-color: #000;
+    background-color: var(--background-color);
     padding: 2rem 2rem 0.15rem 2rem;
     border-radius: 0 1.75rem 1.5rem 0;
     transition: left 5s;
@@ -116,6 +128,13 @@ main{
     font-size: 1.1rem;
     cursor: pointer;
 }
+
+.dashboard-element a{
+    text-decoration: none;
+    color: #FFF ;
+}
+
+/* Social Icons */
 
 .social-icons{
     margin:  1.4rem 1.5rem;
