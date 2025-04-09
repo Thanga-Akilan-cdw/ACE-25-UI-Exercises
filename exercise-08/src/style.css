@@ -36,7 +36,7 @@ main{
     z-index: 1;
 }
 
-.overlay-text{
+.overlay-background{
     position: absolute;
     z-index: 2;
 }
@@ -138,10 +138,8 @@ main{
 
 .social-icons{
     margin:  1.4rem 1.5rem;
-    position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 2;
 }
 
 .fa-brands{
