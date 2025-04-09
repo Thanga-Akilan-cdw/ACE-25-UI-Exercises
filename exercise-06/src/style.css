@@ -56,9 +56,9 @@ header > img{
 .dashboard-wrapper{
     display: none;
     position: absolute;
-    z-index: 1;
     top: 3.25em;
     right: -0.05em;
+    z-index: 1;
     padding-top: 2rem;
 }
 
@@ -79,7 +79,7 @@ header > img{
 }
 
 main{
-    margin: 0 0rem 5.12rem 7.45rem;
+    margin: 0 0 5.12rem 7.45rem;
 }
 
 /*  === Card Styles === */
