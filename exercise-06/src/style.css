@@ -18,12 +18,14 @@ body{
 }
 
 header{
-    margin: 4.9rem 7.3rem 3.55rem 8.95rem;
+    padding: 4.9rem 7.3rem 0 8.95rem;
+    margin-bottom: 3.55rem;
 }
 
 .logo-wrapper{
     height: 4.25rem;
     width: 11.75rem;
+    cursor: pointer;
 }
 
 .wrapped-image{
@@ -39,6 +41,7 @@ header{
     top: 4.078rem;
     left: 96.425rem;
     z-index: 1;
+    cursor: pointer;
 }
 
 .dashboard-wrapper:hover .dashboard{
@@ -71,31 +74,20 @@ header{
     font-size: 1.05rem;
     font-weight: 700;
     list-style: none;
-    cursor: pointer;
     line-height: 2.25em;
 }
 
 main{
-    /* margin: 0 8.935rem 5.12rem; */
-    margin: 0 7.45rem 5.12rem;
-}
-
-.cards-container{
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 3.2rem;
-    row-gap: 3.35rem; */
-
+    margin: 0 6.2rem 5.12rem 7.45rem;
 }
 
 /*  === Card Styles === */
 
-
-.card{
+.card{ 
     display: inline-block;
-    margin: 0 1.485rem 3.25rem;
-    height: 34rem;
+    margin: 0 1.52rem 3.5rem;
 }
+
 
 .card-thumbnail{
     position: relative;
@@ -119,14 +111,17 @@ main{
 
 
 .card-type{
-    font-size: 1.5em;
-    font-weight: 600;
     position: absolute;
     bottom: -1.75rem;
     right: 1.4rem;
     background-color: #87B180;
     padding: 0.85rem 1.25rem;
     border-radius: 50%;
+}
+
+.card-type > p{
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 
@@ -152,11 +147,11 @@ main{
 .card-button{
     background-color: transparent;
     color: var(--secondary-font-color);
-    font-size: 1.01em;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     border: 1px solid #919191;
-    padding: 0.6rem 1.15rem;
-    margin-top: 0.925em;
+    padding: 0.65rem 1.05rem;
+    margin-top: 0.925rem;
     cursor: pointer;
 }
 
