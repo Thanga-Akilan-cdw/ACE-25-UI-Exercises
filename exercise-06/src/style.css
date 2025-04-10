@@ -18,54 +18,52 @@ body{
 }
 
 header{
-    margin: 4.875rem 7.3rem 2.7rem 8.95rem;
-    height: 5.1rem;
+    margin: 4.75rem 7.3rem 3.7rem 8.95rem;
 }
 
-header > img{
-    height: 4.3125rem;
-    width: 11.8125rem;
+.logo-wrapper{
+    height: 4.25rem;
+    width: 11.75rem;
 }
 
-.hamburger{
-    display: inline-block;
-    position: relative;
-    top: -5.35rem;
-    background-color: #D8D8D8;
-    font-weight: 300;
-    width: 4.1875rem;
-    height: 4.1875rem;
-    border-radius: 2.094rem;
-    padding: 1.3em 0 1.3em 1.4em;
-    margin-left: 87.5rem;
-    cursor: pointer;
+.logo-wrapper > img{
+    width: 100%;
+    object-fit: contain;
 }
+
 
 /* === Dashboard === */
 
-.hamburger:hover{
-    .dashboard-wrapper{
+.dashboard-wrapper{
+    position: absolute;  
+    top: 4.078rem;
+    left: 96.425rem;
+    z-index: 1;
+}
+
+.dashboard-wrapper:hover .dashboard{
         display: block;
-    }
 }
 
 .fa-user{
     font-size: 1.5rem;
+    background-color: #D8D8D8;
+    padding: 1.4rem 1.45rem;
+    border-radius: 50%;
 }
 
-.dashboard-wrapper{
-    display: none;
-    position: absolute;
-    top: 3.25em;
-    right: -0.05em;
-    z-index: 1;
-    padding-top: 2rem;
-}
 
 .dashboard{
+    display: none;
+    position: absolute;
+    left: -12.05rem;
+    padding-top: 0.9rem;
+}
+
+.dashboard-content{
     background-color: #EEEEEE;
     color: #1C1C1C;
-    padding: 1.10em 0 0.1em 1.65em;
+    padding: 1.10em 0 0.75em 1.65em;
     width: 16.3rem;
 }
 
@@ -74,29 +72,27 @@ header > img{
     font-weight: 700;
     list-style: none;
     cursor: pointer;
-    margin-top: 0.55rem;
-    margin-bottom: 1.1em;
+    line-height: 2.25em;
 }
 
 main{
-    margin: 0 0 5.12rem 7.45rem;
+    margin: 0 8.935rem 5.12rem;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 3.35rem;
+
 }
 
 /*  === Card Styles === */
 
-.card{
-    display: inline-block;
-    margin: 0 1.485rem 3.25rem;
-    height: 34rem;
-}
-
 .card-thumbnail{
     position: relative;
-    align-content: center;
     background-color: #24252A;
-    padding: 4rem;
-    width: 20.4rem;
-    height: 25.7rem;
+    padding: 5.4rem 2.85rem 4.8rem 2.25rem;
 }
 
 .fa-star{
@@ -108,38 +104,30 @@ main{
 }
 
 
-.card-image-wrapper{    
-    position: relative;
-    top: 0.3em;
-    right: 0.3em;
+.card-image-wrapper{
     height: 15.5em;
+    width: 15.25rem;
 }
 
 .card-image{
-    display: block;
-    justify-self: center;
+    width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .card-type{
-    position: absolute;
-    bottom: -6.8%;
-    right: 1.4rem;
-    align-content: center;
-    text-align: center;
-    background-color: #87B180;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-}
-
-.card-type p{
     font-family: "Roboto",Arial, Helvetica;
     font-size: 1.5em;
     font-weight: 600;
-    padding-top: 0.1875rem;
-    padding-right: 0.0625rem;
+    position: absolute;
+    bottom: -1.75rem;
+    right: 1.4rem;
+    background-color: #87B180;
+    padding: 0.85rem 1.35rem;
+    border-radius: 50%;
+    width: 3.5rem;
 }
+
 
 
 .card-name{
@@ -152,7 +140,7 @@ main{
 .card-price{
     color: var(--secondary-font-color);
     font-family: "Roboto",Arial, Helvetica;
-    font-size: 1.3em;
+    font-size: 1.35em;
     font-weight: 350;
     margin-top: 0.175em;
 }
@@ -167,10 +155,9 @@ main{
     font-family: "Roboto",Arial, Helvetica;
     font-size: 1.01em;
     font-weight: 500;
-    height: 2.65em;
-    width: 9em;
-    border: #919191 1px solid;
-    margin-top: 1em;
+    border: 1px solid #919191;
+    padding: 0.65rem 1.3rem;
+    margin-top: 0.925em;
     cursor: pointer;
 }
 
@@ -181,20 +168,19 @@ footer{
     bottom: 0;
     background-color: #000;
     width: 100%;
+    padding: 2.45rem 34.5rem;
 }
 
 footer ul{
-    justify-self: center;
-    align-content: center;
     list-style-type: none;
-    height: 6.8rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 3.9rem;
 }
 
 footer li{
-    display: inline-block;
     color: var(--primary-font-color);
     font-size: 1.5rem;
     font-weight: 450;
     cursor: pointer;
-    padding: 0.25rem 1.85rem;
 }

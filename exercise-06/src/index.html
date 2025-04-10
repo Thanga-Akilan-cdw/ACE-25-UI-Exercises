@@ -15,136 +15,124 @@
     </head>
     <body>
         <header>
-            <img src="../public/logo.png" alt="FashionZ Logo" width="192px" height="73px" />
+            <div class="logo-wrapper">
+                <img src="../public/logo.png" alt="FashionZ Logo" width="192px" height="73px" />
+            </div>
             <!-- start of Dashboard  -->
-            <div class="hamburger">
+            <div class="dashboard-wrapper">
                 <i class="fa-solid fa-user"></i>
-                <div class="dashboard-wrapper">
-                    <div class="dashboard">
-                        <ul>
-                            <li><a>My Account</a></li>
-                            <li><a>My Orders</a></li>
-                            <li><a>My Wish List</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
+                <div class="dashboard">
+                    <ul class="dashboard-content">
+                        <li><a>My Account</a></li>
+                        <li><a>My Orders</a></li>
+                        <li><a>My Wish List</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
                 </div>
             </div>
             <!-- End of Dashboard -->
         </header>
         <main>
             <!-- Start of Cards Section -->
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/shirt.png" alt="Bath Wardrobe" />
+             <div class="cards-container">
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/shirt.png" alt="Bath Wardrobe" />
+                        </div>
+                        <p class="card-type">S</p>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Bath Wardrobe</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 850</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Bath Wardrobe</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 850</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/jacket.png" alt="Winter Jacket" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/jacket.png" alt="Winter Jacket" />
+                        </div>
+                        <p class="card-type">M</p>
                     </div>
-                    <div class="card-type">
-                        <p>M</p>
-                    </div>
+                    <h2 class="card-name">Winter Jacket</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 2399</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Winter Jacket</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 2399</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/tshirt.png" alt="Red Round Neck" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/tshirt.png" alt="Red Round Neck" />
+                        </div>
+                        <div class="card-type">
+                            <p>S</p>
+                        </div>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Red Round Neck</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 350</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Red Round Neck</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 350</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/sweatshirt.png" alt="Sweat Shirt" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/sweatshirt.png" alt="Sweat Shirt" />
+                        </div>
+                        <p class="card-type">S</p>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Sweat Shirt</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 1350</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Sweat Shirt</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 1350</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/shirt.png" alt="Bath Wardrobe" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/shirt.png" alt="Bath Wardrobe" />
+                        </div>
+                        <p class="card-type">S</p>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Bath Wardrobe</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 850</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Bath Wardrobe</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 850</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/jacket.png" alt="Winter Jacket" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/jacket.png" alt="Winter Jacket" />
+                        </div>
+                        <p class="card-type">S</p>
                     </div>
-                    <div class="card-type">
-                        <p>M</p>
-                    </div>
+                    <h2 class="card-name">Winter Jacket</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 2399</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Winter Jacket</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 2399</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/tshirt.png" alt="Red Round Neck" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/tshirt.png" alt="Red Round Neck" />
+                        </div>
+                        <p class="card-type">M</p>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Red Round Neck</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 350</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Red Round Neck</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 350</p>
-                <button class="card-button">ADD TO CART</button>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail">
-                    <i class="fa-regular fa-star"></i>
-                    <div class="card-image-wrapper">
-                        <img class="card-image" src="../public/products/sweatshirt.png" alt="Sweat Shirt" />
+                <div class="card">
+                    <div class="card-thumbnail">
+                        <i class="fa-regular fa-star"></i>
+                        <div class="card-image-wrapper">
+                            <img class="card-image" src="../public/products/sweatshirt.png" alt="Sweat Shirt" />
+                        </div>
+                        <p class="card-type">S</p>
                     </div>
-                    <div class="card-type">
-                        <p>S</p>
-                    </div>
+                    <h2 class="card-name">Sweat Shirt</h2>
+                    <p class="card-price"><span class="currency-symbol">&#8377;</span> 1350</p>
+                    <button class="card-button">ADD TO CART</button>
                 </div>
-                <h2 class="card-name">Sweat Shirt</h2>
-                <p class="card-price"><span class="currency-symbol">&#8377;</span> 1350</p>
-                <button class="card-button">ADD TO CART</button>
             </div>
             <!-- End of Cards Section -->
         </main>
