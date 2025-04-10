@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise-10 Section - 2 </title>
-</head>
-<body>
-    <h1>Exercise - 10 Section - 2</h1>
-    <script>
+
         // Add 11 players in an array
         let players = ["Akil","Hari","Muruga","Saran","Saro","Prasanth","Mike","Beni","Rishi","Aurum","Ram"]
 
         // First Player removed due to injury
-        console.log(`${players.shift} is removed due to injury`)
+        console.log(`${players.shift()} is removed due to injury`)
 
         // Display number of players after removing injured.
         console.log(`The number of players is ${players.length}`)
@@ -37,6 +28,3 @@
         for(let iterator = 0; iterator < playersForJersey.length; iterator++){
             console.log(`${playersForJersey[iterator].name} - ${playersForJersey[iterator].jerseyNumber}`);
         }
-    </script>
-</body>
-</html>
