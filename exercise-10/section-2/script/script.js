@@ -17,9 +17,17 @@
         let playersForJersey= [];
         for(let iterator = 0; iterator < players.length; iterator++){
             playersForJersey.push({"name": players[iterator].toUpperCase(), "jerseyNumber":generateRandom(100)});
-            console.log(`${players[iterator]} - ${playersForJersey[iterator].jerseyNumber}`);
         }
 
+        console.log(playersForJersey);
+
+        // Using Map for the same
+        let jerserPlayers = players.map((player)=>{
+            return{ "name": player, "jerseyNumber":generateRandom(100)};
+        })
+
+
+        console.log(jerserPlayers);
 
         // Print Player names in upper case along with jersey number
 
