@@ -46,6 +46,8 @@ function computeResult(){
     }
 }
 
+// Object with operations and prompt
+
 let calculatorOperations = {
     add               : function(a,b){ return (parseInt(a)+parseInt(b));},
     subtract          : function(a,b){ return (a-b);},
