@@ -3,7 +3,7 @@ displayNumbersTill100()
 displayTodaysDate()
 console.log("Fahrenheit : "+convertToFahrenheit(100));
 console.log("Average of Array : "+getAverage([1,2,3,4]))
-console.log("Reversed String : "+ reverseString("hello"))
+console.log("Reversed String : "+ reverseString2("hello"))
 
 // Display all number from 1 to 100
 function displayNumbersTill100(){
@@ -39,7 +39,13 @@ function reverseString(originalString){
     let reversedString = "";
     for(let i = originalString.length-1; i>=0;i--){
         reversedString += originalString[i];
-        console.log(reversedString)
     }
     return(reversedString);
 }
+
+
+// Using Recursion
+function reverseString2(originalString){
+    return (originalString == "")?"":reverseString2(originalString.substr(1))+originalString.charAt(0);
+}
+
