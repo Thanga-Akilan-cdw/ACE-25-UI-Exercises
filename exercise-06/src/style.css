@@ -26,11 +26,11 @@ header{
     width: 11.75rem;
 }
 
-.logo-wrapper > img{
+.wrapped-image{
     width: 100%;
+    height: 100%;
     object-fit: contain;
 }
-
 
 /* === Dashboard === */
 
@@ -109,14 +109,8 @@ main{
     width: 15.25rem;
 }
 
-.card-image{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
 .card-type{
-    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.5em;
     font-weight: 600;
     position: absolute;
@@ -139,7 +133,6 @@ main{
 
 .card-price{
     color: var(--secondary-font-color);
-    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.35em;
     font-weight: 350;
     margin-top: 0.175em;
@@ -152,11 +145,10 @@ main{
 .card-button{
     background-color: transparent;
     color: var(--secondary-font-color);
-    font-family: "Roboto",Arial, Helvetica;
     font-size: 1.01em;
     font-weight: 500;
     border: 1px solid #919191;
-    padding: 0.65rem 1.3rem;
+    padding: 0.6rem 1.15rem;
     margin-top: 0.925em;
     cursor: pointer;
 }
@@ -172,7 +164,6 @@ footer{
 }
 
 footer ul{
-    list-style-type: none;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 3.9rem;
@@ -182,5 +173,6 @@ footer li{
     color: var(--primary-font-color);
     font-size: 1.5rem;
     font-weight: 450;
+    list-style: none;
     cursor: pointer;
 }
