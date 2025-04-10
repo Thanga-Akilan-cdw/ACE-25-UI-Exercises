@@ -76,18 +76,26 @@ header{
 }
 
 main{
-    margin: 0 8.935rem 5.12rem;
+    /* margin: 0 8.935rem 5.12rem; */
+    margin: 0 7.45rem 5.12rem;
 }
 
 .cards-container{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 3.2rem;
-    row-gap: 3.35rem;
+    row-gap: 3.35rem; */
 
 }
 
 /*  === Card Styles === */
+
+
+.card{
+    display: inline-block;
+    margin: 0 1.485rem 3.25rem;
+    height: 34rem;
+}
 
 .card-thumbnail{
     position: relative;
@@ -117,9 +125,8 @@ main{
     bottom: -1.75rem;
     right: 1.4rem;
     background-color: #87B180;
-    padding: 0.85rem 1.35rem;
+    padding: 0.85rem 1.25rem;
     border-radius: 50%;
-    width: 3.5rem;
 }
 
 
@@ -176,3 +183,4 @@ footer li{
     list-style: none;
     cursor: pointer;
 }
+
