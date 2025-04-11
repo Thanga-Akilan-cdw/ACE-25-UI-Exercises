@@ -56,5 +56,9 @@
         // Generate Random number
 
         function generateRandom(limit){
+            if(limit<2){
+                console.log("The limit is very short: Enter larger limit ;")
+                return;
+            }
             return Math.floor(Math.random()*limit);
         }

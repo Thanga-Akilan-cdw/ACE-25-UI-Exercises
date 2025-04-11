@@ -3,7 +3,9 @@ displayNumbersTill100()
 displayTodaysDate()
 console.log("Fahrenheit : "+convertToFahrenheit(100));
 console.log("Average of Array : "+getAverage([1,2,3,4]))
-console.log("Reversed String : "+ reverseString2("hello"))
+console.log("Reversed String : "+ reverseString("hello"))
+console.log("Reversed String : "+ reverseString(undefined))
+console.log("Reversed String : "+ reverseString(null))
 
 // Display all number from 1 to 100
 function displayNumbersTill100(){
@@ -36,6 +38,10 @@ function getAverage(array){
 
 // Return the reverse of a string
 function reverseString(originalString){
+    if(!originalString){
+        console.log("Invalid string");
+        return;
+    }
     let reversedString = "";
     for(let i = originalString.length-1; i>=0;i--){
         reversedString += originalString[i];
