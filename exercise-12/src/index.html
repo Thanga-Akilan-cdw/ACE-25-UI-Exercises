@@ -21,16 +21,16 @@
             <h2 class="shape-selection_heading">1. Choose a Shape</h2>
             <div class="shapes-container">
                 <div class="circle-wrapper">
-                    <div class="circle"><div class="tick"></div></div>
+                    <div class="shape circle" data-shape="circle"><div class="tick"></div></div>
                 </div>
                 <div class="triangle-wrapper">
-                    <div class="triangle"><div class="tick"></div></div>
+                    <div class="shape triangle" data-shape="triangle"><div class="tick"></div></div>
                 </div>
                 <div class="square-wrapper">
-                    <div class="square"><div class="tick"></div></div>
+                    <div class="shape square" data-shape="square"><div class="tick"></div></div>
                 </div>
             </div>
-            <button class="button next-button">NEXT</button>
+            <button id="next-button" class="button next-button">NEXT</button>
         </section>
         <section class="dimension-section" id="dimension-section">
                 <h2 class="dimension-heading">2. Enter Side </h2>
@@ -39,28 +39,28 @@
         </section>
         <section class="result-section">
             <div class="square"></div>
-            <h2>Square</h2>
-            <table>
-                <tr>
-                    <td>SIDE</td>
-                    <td></td>
-                    <td></td>
+            <h2 class="result-heading">Square</h2>
+            <table class="result-content-table">
+                <tr class="property-row">
+                    <td class="result-property">SIDE</td>
+                    <td class="result-formula">s</td>
+                    <td class="result-value">5cm</td>
                 </tr>
-                <tr>
-                    <td>AREA</td>
-                    <td></td>
-                    <td></td>
+                <tr class="property-row">
+                    <td class="result-property">AREA</td>
+                    <td class="result-formula">s * s</td>
+                    <td class="result-value">25 sq cm</td>
                 </tr>
-                <tr>
-                    <td>PERIMETER</td>
-                    <td></td>
-                    <td></td>
+                <tr class="property-row">
+                    <td class="result-property">PERIMETER</td>
+                    <td class="result-formula">4 * s</td>
+                    <td class="result-value">20 cm</td>
                 </tr>
             </table>
-            <button>START AGAIN</button>
+            <button class="button repeat-button">START AGAIN</button>
         </section>
     </main>
-    <script src="asset.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 </html>
 

@@ -52,7 +52,7 @@ main{
 
 .shape-selection{
     height: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -99,10 +99,9 @@ main{
     border-left: 2px solid #FFF;
 }
 
-.circle, .triangle, .square 
 
 .next-button{
-    visibility: hidden;
+    /* visibility: hidden; */
     padding: 0.7rem 4.75rem;
     border-radius: 0.25rem;
 }
@@ -147,9 +146,47 @@ main{
 
 .result-section{
     height: 100%;
-    display: flex;
+    padding-top: 1rem;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+.result-heading{
+    font-size: 3rem;
+    font-weight: 350;
+    padding-top: 2rem;
+}
+
+.result-content-table{
+    border-collapse: separate;
+    border-spacing: 0 1.175rem;
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+
+.property-row{
+    line-height: 0.85rem;
+}
+
+.result-property{
+    background-color: #0D62D6;
+    padding: 1rem 5.5rem 1rem 1rem ;
+}
+
+.result-formula{
+    background-color: #455D7E;
+    padding: 1rem 5rem 1rem 1rem ;
+}
+
+.result-value{
+    background-color: #3288FF;
+    padding: 1rem 2.5rem 1rem 1rem ;
+}
+
+.repeat-button{
+    margin-top: 4rem;
+    padding: 0.75rem 2rem;
 }
