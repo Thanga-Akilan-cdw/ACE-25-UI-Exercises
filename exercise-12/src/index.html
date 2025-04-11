@@ -17,7 +17,7 @@
         <h2 class="heading">KIDS LEARNING APP</h2>
     </header>
     <main>
-        <section class="shape-selection">
+        <section class="shape-selection" id="shape-section">
             <h2 class="shape-selection_heading">1. Choose a Shape</h2>
             <div class="shapes-container">
                 <div class="circle-wrapper">
@@ -30,7 +30,34 @@
                     <div class="square"><div class="tick"></div></div>
                 </div>
             </div>
-            <button class="next-button">NEXT</button>
+            <button class="button next-button">NEXT</button>
+        </section>
+        <section class="dimension-section" id="dimension-section">
+                <h2 class="dimension-heading">2. Enter Side </h2>
+                <input class="dimension-input" type="text" >
+                <button class="button calculate-button">CALCULATE</button>
+        </section>
+        <section class="result-section">
+            <div class="square"></div>
+            <h2>Square</h2>
+            <table>
+                <tr>
+                    <td>SIDE</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>AREA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PERIMETER</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <button>START AGAIN</button>
         </section>
     </main>
     <script src="asset.js"></script>
