@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- External Stylesheet -->
-     <link rel="stylesheet" href="style.css" >
+     <link rel="stylesheet" href="../styles/style.css" >
 </head>
 <body>
     <header>
@@ -21,43 +21,43 @@
             <h2 class="shape-selection_heading">1. Choose a Shape</h2>
             <div class="shapes-container">
                 <div class="circle-wrapper">
-                    <div class="shape circle" data-shape="circle"><div class="tick"></div></div>
+                    <div class="shape circle" data-shape="circle"><span class="tick">&#10003;</span></div>
                 </div>
                 <div class="triangle-wrapper">
-                    <div class="shape triangle" data-shape="triangle"><div class="tick"></div></div>
+                    <div class="shape triangle" data-shape="triangle"><span class="tick">&#10003;</span></div>
                 </div>
                 <div class="square-wrapper">
-                    <div class="shape square" data-shape="square"><div class="tick"></div></div>
+                    <div class="shape square" data-shape="square"><span class="tick">&#10003;</span></div>
                 </div>
             </div>
             <button id="next-button" class="button next-button">NEXT</button>
         </section>
         <section class="dimension-section" id="dimension-section">
-                <h2 class="dimension-heading">2. Enter Side </h2>
-                <input class="dimension-input" type="text" >
-                <button class="button calculate-button">CALCULATE</button>
+                <h2 class="dimension-heading" id="dimension-heading">2. Enter </h2>
+                <input id="dimension-input" class="dimension-input" type="text" >
+                <button id="calculate-button" class="button calculate-button">CALCULATE</button>
         </section>
-        <section class="result-section">
+        <section id="result-section" class="result-section">
             <div class="square"></div>
             <h2 class="result-heading">Square</h2>
             <table class="result-content-table">
                 <tr class="property-row">
                     <td class="result-property">SIDE</td>
-                    <td class="result-formula">s</td>
-                    <td class="result-value">5cm</td>
+                    <td id="dimension-symbol" class="result-formula">s</td>
+                    <td id="dimension-value" class="result-value">5cm</td>
                 </tr>
                 <tr class="property-row">
                     <td class="result-property">AREA</td>
-                    <td class="result-formula">s * s</td>
-                    <td class="result-value">25 sq cm</td>
+                    <td id="area-formula" class="result-formula">s * s</td>
+                    <td id="area-value" class="result-value">25 sq cm</td>
                 </tr>
                 <tr class="property-row">
                     <td class="result-property">PERIMETER</td>
-                    <td class="result-formula">4 * s</td>
-                    <td class="result-value">20 cm</td>
+                    <td id="perimeter-formula" class="result-formula"></td>
+                    <td id="perimeter-value" class="result-value"> cm</td>
                 </tr>
             </table>
-            <button class="button repeat-button">START AGAIN</button>
+            <button id="reset-button" class="button repeat-button">START AGAIN</button>
         </section>
     </main>
     <script src="../script/script.js"></script>
