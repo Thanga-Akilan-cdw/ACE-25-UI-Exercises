@@ -1,12 +1,11 @@
-
-
+/* Resetting defaults */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Setting default values */
 body{
     background-color: #F5F5F5;
     font-family: "Roboto",Arial, Helvetica;
@@ -16,21 +15,23 @@ main{
     width: 100%;
 }
 
+/* Logo Wrapper */
+
 .logo-wrapper{
-    width: 17rem;
-    height: 10rem;
+    width: 12rem;
     margin: 0 auto;
 }
 
 .logo-wrapper>img{
-    
+    padding: 2.25rem 1.4rem 2.25rem;
 }
 
+/* Form Section */
 
 .billing-form{
     margin: 0 auto;
     width: 36%;
-    padding: 2.5rem;
+    padding: 0.5rem 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -39,30 +40,35 @@ main{
     text-align: left;
 }
 
-.input-container{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-
 .billing-form h2{
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.75rem;
     font-size: 1.05rem;
     font-weight: 500;
     letter-spacing: 1px;
     color: #001B71;
 }
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+
+label{
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
 .input-container > input{
-    height: 2.90rem;
+    height: 2.70rem;
     border-radius: 0.25rem;
     border: 1px solid #CCCCCC ;
     padding: 1rem;
 }
 
-.input-container > input:invalid{
-    border: 1px solid #C85F5F;
-}
 
 .error-message{
     font-size: 0.75rem;
@@ -76,11 +82,11 @@ main{
 }
 
 .half-input{
-    width: 16.65rem;
+    width: 16.35rem;
 }
 
 .full-input{
-    width: 35rem;
+    width: 34rem;
 }
 
 .submit-btn{
@@ -89,11 +95,4 @@ main{
     background-color: #001B71;
     color: #FFF;
 }
-
-label{
-    font-size: 0.6rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
 
