@@ -138,9 +138,9 @@ function validateInputs(){
 
     // Pincode
     if(pincodeValue === ''){
-        setError(pincode, "Pincode is required")
+        setError(pincode, "PIN Code is required")
     }else if(!isValidPincode(pincodeValue)){
-        setError(pincode, "Pincode is not valid")
+        setError(pincode, "PIN Code is not valid")
     }
     else{
         setSuccess(pincode)
