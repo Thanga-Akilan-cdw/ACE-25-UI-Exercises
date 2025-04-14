@@ -1,3 +1,6 @@
+
+let form = document.getElementById("billing-form");
+
 // Input Element variables 
 let firstName = document.getElementById("first-name")
 let lastName = document.getElementById("last-name")
@@ -8,173 +11,168 @@ let cardNumber = document.getElementById("card-number")
 let cardExpiry = document.getElementById("card-expiry")
 let cvv = document.getElementById("cvv")
 
-// Error handling Elements
-let firstNameError = document.getElementById("first-name-error")
-let lastNameError = document.getElementById("last-name-error")
-let emailError = document.getElementById("email-error");
-let contactNumberError = document.getElementById("contact-number-error")
-let pincodeError = document.getElementById("pincode-error")
-let cardNumberError = document.getElementById("card-number-error")
-let cardExpiryError = document.getElementById("card-expiry-error")
-let cvvError = document.getElementById("cvv-error")
+// Event listener for the form
+form.addEventListener("submit", (e)=> {
+    e.preventDefault();
+    validateInputs();
 
-// First Name
+})
 
-firstName.addEventListener("invalid",(e)=>{
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        firstNameError.innerHTML = "First Name is required"
+// Error function 
+const setError = (element, message) => {
+    let parentContainer = element.parentElement;
+    let errorText = parentContainer.querySelector(".error");
+
+    errorText.innerHTML = message;
+    parentContainer.classList.add('error');
+}
+
+// Success Function
+const setSuccess = (element) => {
+    let parentContainer = element.parentElement;
+    let errorText = parentContainer.querySelector(".error");
+
+    errorText.innerHTML = "";
+    parentContainer.classList.remove('error');
+}
+
+// Check valid Name
+const isValidName = (value) => {
+    let namePattern = /^[\w]{1,30}$/
+    return namePattern.test(value);
+}
+
+
+// Check valid Email
+const isValidEmail = (emailValue) => {
+    let emailPattern = /^[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(emailValue);
+
+}
+
+
+// Check valid Contact Number
+const isValidContactNumber = (contactNo) => {
+    let numberpattern = /^[\d]{10}$/ 
+    return numberpattern.test(contactNo);
+}
+
+
+// Check valid Pincode
+const isValidPincode = (pincodeValue) => {
+    let pincodePattern = /^[1-9][\d]{5}$/
+    return pincodePattern.test(pincodeValue);
+}
+
+
+// Check valid Card Number
+const isValidCardNumber = (cardNumberValue) => {
+    let cardNumberPattern = /^[\d]{16}$/;
+    return cardNumberPattern.test(cardNumberValue);
+} 
+
+
+// Check valid Expiry Year
+const isValidExpiryYear = (cardExpiryValue) => {
+    let cardExpiryPattern = /^(202[5-9]|20[3-9][0-9]|2[1-9][0-9]{2}|[3-9][0-9]{3})$/;
+    return cardExpiryPattern.test(cardExpiryValue);
+}
+
+
+// Check valid cvv
+const isValidCvv = (cvvValue) => {
+    let cvvPattern = /^[\d]{3,4}$/;
+    return cvvPattern.test(cvvValue);
+}
+
+// Validate all inputs
+function validateInputs(){
+    let fnameValue = firstName.value;
+    let lnameValue = lastName.value;
+    let emailValue = email.value;
+    let contactNumberValue = contactNumber.value;
+    let pincodeValue = pincode.value;
+    let cardNumberValue = cardNumber.value;
+    let cardExpiryValue = cardExpiry.value;
+    let cvvValue = cvv.value;
+
+    // Firstname
+    if(fnameValue === '' ){
+        setError(firstName, "First Name is required");
+    }else if(!isValidName(fnameValue)){
+        setError(firstName,"First Name is not valid")
     }
-})
-
-firstName.addEventListener("input",function(){
-    firstNameError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-// Last Name
-
-lastName.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        lastNameError.innerHTML = "Last Name is required"
+    else{
+        setSuccess(firstName);
     }
-})
 
-lastName.addEventListener("input",function(){
-    lastNameError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-
-// EMail
-
-email.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        emailError.innerHTML = "Email Address is required"
-    }else if(this.validity.typeMismatch){
-        emailError.innerHTML = "Email Address is not valid"
+    // Lastname
+    if(lnameValue === ''){
+        setError(lastName, "Last Name is required")
+    }else if(!isValidName(lnameValue)){
+        setError(lastName,"Last Name is not valid")
     }
-})
-
-email.addEventListener("input",function(){
-    emailError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-    
-})
-
-// Contact Number
-contactNumber.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        contactNumberError.innerHTML = "Contact Number is required"
-    }else if(this.validity.patternMismatch){
-        contactNumberError.innerHTML = "Contact Number is not valid"
+    else{
+        setSuccess(lastName)
     }
-})
 
-contactNumber.addEventListener("input",function(){
-    contactNumberError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-// Pincode
-pincode.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        pincodeError.innerHTML = "Pincode is required"
-    }else if(this.validity.patternMismatch){
-        pincodeError.innerHTML = "Pincode is not valid"
+    // Email
+    if(emailValue === ''){
+        setError(email, "Email Address is required")
+    }else if(!isValidEmail(emailValue)){
+        setError(email,"Email Address is not valid")
     }
-})
-
-pincode.addEventListener("input",function(){
-    pincodeError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-// Card Number
-cardNumber.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        cardNumberError.innerHTML = "Card Number is required";
-    }else if(this.validity.patternMismatch){
-        cardNumberError.innerHTML = "Card Number is not valid"
+    else{
+        setSuccess(email)
     }
-})
 
-cardNumber.addEventListener("input",function(){
-    cardNumberError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-// Card Expiry
-cardExpiry.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        cardExpiryError.innerHTML = "Card Expiry is required"
-    }else if(this.validity.patternMismatch){
-        cardExpiryError.innerHTML = "Card Expiry is not valid"
+    // Contact number
+    if(contactNumberValue === ''){
+        setError(contactNumber, "Contact Number is required")
+    }else if(!isValidContactNumber(contactNumberValue)){
+        setError(contactNumber,"Contact Number is not valid")
     }
-})
-
-cardExpiry.addEventListener("input",function(){
-    cardExpiryError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
-
-// CVV
-cvv.addEventListener("invalid",function(e){
-    e.preventDefault()
-    this.style.border = "1px solid #C85F5F";
-    if(this.validity.valueMissing){
-        cvvError.innerHTML = "CVV is required";
-    }else if(this.validity.patternMismatch){
-        cvvError.innerHTML = "CVV is not valid";
+    else{
+        setSuccess(contactNumber)
     }
-})
 
-cvv.addEventListener("input",function(){
-    cvvError.innerHTML = "";
-    if (this.validity.valid) {
-        this.style.border = "1px solid #CCCCCC";
-      } else {
-        this.style.border = "1px solid #C85F5F";
-      }
-})
+    // Pincode
+    if(pincodeValue === ''){
+        setError(pincode, "Pincode is required")
+    }else if(!isValidPincode(pincodeValue)){
+        setError(pincode, "Pincode is not valid")
+    }
+    else{
+        setSuccess(pincode)
+    }
+
+    // Card Number
+    if(cardNumberValue === ''){
+        setError(cardNumber, "Card Number is required")
+    }else if(!isValidCardNumber(cardNumberValue)){
+        setError(cardNumber,"Card Number is not valid")
+    }
+    else{
+        setSuccess(cardNumber)
+    }
+
+    // Card Expiry
+    if(cardExpiryValue === ''){
+        setError(cardExpiry, "Card Expiry is required")
+    }else if(!isValidExpiryYear(cardExpiryValue)){
+        setError(cardExpiry, "Card Expiry is not valid")
+    }
+    else{
+        setSuccess(cardExpiry)
+    }
+
+    // CVV
+    if(cvvValue === ''){
+        setError(cvv, "CVV is required")
+    }else if(!isValidCvv(cvvValue)){
+        setError(cvv, "CVV is not valid")
+    }
+    else{
+        setSuccess(cvv)
+    }
+}

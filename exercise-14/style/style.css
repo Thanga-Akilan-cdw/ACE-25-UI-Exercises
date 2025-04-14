@@ -68,11 +68,14 @@ label{
     border: 1px solid #CCCCCC ;
     padding: 1rem;
 }
-
-
-.error-message{
-    font-size: 0.75rem;
+.input-container .error{
+    padding-top: 0.35rem;
+    font-size: 0.65rem;
     color: #C85F5F;
+}
+
+.input-container.error input{
+    border: 1px solid #C85F5F;
 }
 
 .half-input-container{
