@@ -1,0 +1,99 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #F5F5F5;
+    font-family: "Roboto",Arial, Helvetica;
+}
+
+main{
+    width: 100%;
+}
+
+.logo-wrapper{
+    width: 17rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+
+.logo-wrapper>img{
+    
+}
+
+
+.billing-form{
+    margin: 0 auto;
+    width: 36%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFF;
+    box-shadow: 0 -6px 0 #fff, 0 1px 6px rgba(0,0,0, .35);
+    text-align: left;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.billing-form h2{
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #001B71;
+}
+
+.input-container > input{
+    height: 2.90rem;
+    border-radius: 0.25rem;
+    border: 1px solid #CCCCCC ;
+    padding: 1rem;
+}
+
+.input-container > input:invalid{
+    border: 1px solid #C85F5F;
+}
+
+.error-message{
+    font-size: 0.75rem;
+    color: #C85F5F;
+}
+
+.half-input-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.half-input{
+    width: 16.65rem;
+}
+
+.full-input{
+    width: 35rem;
+}
+
+.submit-btn{
+    height: 2.90rem;
+    border-radius: 0.25rem;
+    background-color: #001B71;
+    color: #FFF;
+}
+
+label{
+    font-size: 0.6rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+
