@@ -14,7 +14,9 @@ body{
     font-family: "Roboto Condensed",Arial, Helvetica;
     color: #FFFFFF;
     background-color:  var(--background-color);
-    margin: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Introduction Section */
@@ -25,6 +27,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.mail-contact_desktop{
+    display: none;
 }
 
 .main-heading{
@@ -42,7 +48,7 @@ body{
     font-size: 2.05em;
     font-weight: 600;
     letter-spacing: 0.075rem;
-    padding-top: .57em;
+    margin-top: .57em;
 }
 
 .sub-heading span{
@@ -50,7 +56,7 @@ body{
 }
 
 .mail-contact{
-    padding-top: .5em;
+    margin-top: .5em;
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -59,11 +65,13 @@ body{
 /* Image Section */
 
 .image-container{
-    width: 100% 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .image-container img{
-    width: 100%;
+    width: min(80%,27.05rem);
     margin-bottom: 1em;
 }
 
@@ -71,7 +79,7 @@ body{
 
 .logo-container{
     text-align: center;
-    padding: 3.85em 0 0;
+    margin: 3.85rem 1rem 5.5rem;
 }
 
 
@@ -90,8 +98,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 3.2em 0 0;
-    margin: 0 1rem 5.5em;
+    margin-top: 3.2em;
 }
 
 .logo-wrapper{
@@ -181,7 +188,7 @@ footer{
 @media screen and (min-width: 768px) {
 
     body{
-        margin: 4.15rem 11.2rem 4.15rem 11.25rem;
+        margin: 4.15rem 0;
     }
 
     /* Introduction Section */
@@ -214,8 +221,6 @@ footer{
     /* Image Section */
 
     .image-container{
-        display: flex;
-        flex-wrap: wrap;
         gap: 1.2em 2.2rem;
         margin-top: 3.15em;
     }
