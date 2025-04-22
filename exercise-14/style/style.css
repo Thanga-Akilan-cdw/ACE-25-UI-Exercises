@@ -52,18 +52,18 @@ main{
 .input-container{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.5rem;
 }
 
 .payment-division{
-    margin-top: 0.75rem;
+    margin-top: 0;
     margin-bottom: 1.45rem;
 }
 
 
 label{
-    font-size: 0.65rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 450;
     margin-bottom: 0.25rem;
 }
 
@@ -103,5 +103,6 @@ label{
     color: #FFF;
     font-size: 0.9rem;
     font-weight: 500;
+    cursor: pointer;
 }
 

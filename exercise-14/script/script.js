@@ -11,6 +11,17 @@ let cardNumber = document.getElementById("card-number")
 let cardExpiry = document.getElementById("card-expiry")
 let cvv = document.getElementById("cvv")
 
+
+//REGEX Patterns
+let namePattern = /^[\w]{1,30}$/;
+let emailPattern = /^[\w.%+-]+@(sirius)+\.(com)$/i;
+let numberpattern = /^[\d]{10}$/;
+let pincodePattern = /^[1-9][\d]{5}$/;
+let cardNumberPattern = /^[\d]{16}$/;
+let cardExpiryPattern = /^(202[5-9]|20[3-9][0-9]|2[1-9][0-9]{2}|[3-9][0-9]{3})$/;
+let cvvPattern = /^[\d]{3,4}$/;
+
+
 // Event listener for the form
 form.addEventListener("submit", (e)=> {
     e.preventDefault();
@@ -22,157 +33,58 @@ form.addEventListener("submit", (e)=> {
 const setError = (element, message) => {
     let parentContainer = element.parentElement;
     let errorText = parentContainer.querySelector(".error");
-
     errorText.innerHTML = message;
     parentContainer.classList.add('error');
 }
 
-// Success Function
-const setSuccess = (element) => {
-    let parentContainer = element.parentElement;
-    let errorText = parentContainer.querySelector(".error");
-
-    errorText.innerHTML = "";
-    parentContainer.classList.remove('error');
-}
-
-// Check valid Name
-const isValidName = (value) => {
-    let namePattern = /^[\w]{1,30}$/
-    return namePattern.test(value);
+// Clear error message
+const clearErrorMessages = ()=>{
+    let errorElements = form.querySelectorAll("div.error");
+    if(errorElements.length !=0){
+        errorElements.forEach((errorInfoElement)=>{
+            errorInfoElement.lastElementChild.innerHTML = "";
+            errorInfoElement.classList.remove('error');
+        })}
 }
 
 
-// Check valid Email
-const isValidEmail = (emailValue) => {
-    let emailPattern = /^[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailPattern.test(emailValue);
-
+// Validate the regex
+const validatePattern = (value, pattern) => {
+    return pattern.test(value);
 }
 
 
-// Check valid Contact Number
-const isValidContactNumber = (contactNo) => {
-    let numberpattern = /^[\d]{10}$/ 
-    return numberpattern.test(contactNo);
+// return the name of the field
+const getName = (field) =>{
+    let parent = field.parentElement;
+    return (parent.querySelector("label").innerHTML);
 }
 
 
-// Check valid Pincode
-const isValidPincode = (pincodeValue) => {
-    let pincodePattern = /^[1-9][\d]{5}$/
-    return pincodePattern.test(pincodeValue);
+// Validate the field
+function validateField(field, fieldPattern){
+    if(field.value === '' ){
+        setError(field, `${getName(field)} is required`);
+    }else if(!validatePattern(field.value, fieldPattern)){
+        setError(field,`${getName(field)} is not valid`);
+    }
 }
 
-
-// Check valid Card Number
-const isValidCardNumber = (cardNumberValue) => {
-    let cardNumberPattern = /^[\d]{16}$/;
-    return cardNumberPattern.test(cardNumberValue);
-} 
-
-
-// Check valid Expiry Year
-const isValidExpiryYear = (cardExpiryValue) => {
-    let cardExpiryPattern = /^(202[5-9]|20[3-9][0-9]|2[1-9][0-9]{2}|[3-9][0-9]{3})$/;
-    return cardExpiryPattern.test(cardExpiryValue);
-}
-
-
-// Check valid cvv
-const isValidCvv = (cvvValue) => {
-    let cvvPattern = /^[\d]{3,4}$/;
-    return cvvPattern.test(cvvValue);
-}
 
 // Validate all inputs
 function validateInputs(){
-    let fnameValue = firstName.value;
-    let lnameValue = lastName.value;
-    let emailValue = email.value;
-    let contactNumberValue = contactNumber.value;
-    let pincodeValue = pincode.value;
-    let cardNumberValue = cardNumber.value;
-    let cardExpiryValue = cardExpiry.value;
-    let cvvValue = cvv.value;
 
-    // Firstname
-    if(fnameValue === '' ){
-        setError(firstName, "First Name is required");
-    }else if(!isValidName(fnameValue)){
-        setError(firstName,"First Name is not valid")
-    }
-    else{
-        setSuccess(firstName);
-    }
+    // Clear error messages
+    clearErrorMessages();
 
-    // Lastname
-    if(lnameValue === ''){
-        setError(lastName, "Last Name is required")
-    }else if(!isValidName(lnameValue)){
-        setError(lastName,"Last Name is not valid")
-    }
-    else{
-        setSuccess(lastName)
-    }
+    // validate all the fields with the pattern
+    validateField(firstName, namePattern);
+    validateField(lastName, namePattern);
+    validateField(email, emailPattern);
+    validateField(contactNumber, numberpattern);
+    validateField(pincode, pincodePattern);
+    validateField(cardNumber, cardNumberPattern);
+    validateField(cardExpiry, cardExpiryPattern);
+    validateField(cvv, cvvPattern);
 
-    // Email
-    if(emailValue === ''){
-        setError(email, "Email Address is required")
-    }else if(!isValidEmail(emailValue)){
-        setError(email,"Email Address is not valid")
-    }
-    else{
-        setSuccess(email)
-    }
-
-    // Contact number
-    if(contactNumberValue === ''){
-        setError(contactNumber, "Contact Number is required")
-    }else if(!isValidContactNumber(contactNumberValue)){
-        setError(contactNumber,"Contact Number is not valid")
-    }
-    else{
-        setSuccess(contactNumber)
-    }
-
-    // Pincode
-    if(pincodeValue === ''){
-        setError(pincode, "PIN Code is required")
-    }else if(!isValidPincode(pincodeValue)){
-        setError(pincode, "PIN Code is not valid")
-    }
-    else{
-        setSuccess(pincode)
-    }
-
-    // Card Number
-    if(cardNumberValue === ''){
-        setError(cardNumber, "Card Number is required")
-    }else if(!isValidCardNumber(cardNumberValue)){
-        setError(cardNumber,"Card Number is not valid")
-    }
-    else{
-        setSuccess(cardNumber)
-    }
-
-    // Card Expiry
-    if(cardExpiryValue === ''){
-        setError(cardExpiry, "Card Expiry is required")
-    }else if(!isValidExpiryYear(cardExpiryValue)){
-        setError(cardExpiry, "Card Expiry is not valid")
-    }
-    else{
-        setSuccess(cardExpiry)
-    }
-
-    // CVV
-    if(cvvValue === ''){
-        setError(cvv, "CVV is required")
-    }else if(!isValidCvv(cvvValue)){
-        setError(cvv, "CVV is not valid")
-    }
-    else{
-        setSuccess(cvv)
-    }
 }
