@@ -41,43 +41,33 @@ for(shape of shapes){
     shape.addEventListener("click",(event)=>chooseShape(event))
 }
 
-
-function chooseShape(event){
-    let selectedShape =event.target.dataset.shape;
-
-    let currentShape =  data.filter((shape)=>{
-        return shape.shapeName.toLowerCase() == selectedShape;
-    });
-
-    let tick = document.querySelector("." +  selectedShape+ " >.tick ")
-
-    if(tick.display=="none"){
-        tick.display = "inline";
-        console.log(1);
-    }
-    else{
-        tick.display = "none";
-        console.log(2);
-    }
-    
-   
-
-    userSelectedShape = currentShape[0];
-    localStorage.setItem("currentShape",JSON.stringify(currentShape));
-
-}
-
-
 let shapeSelectionButton = document.getElementById("next-button");
 
 shapeSelectionButton.addEventListener("click",()=>selectedShape())
+
+
+function chooseShape(event){
+    let currentTick = event.target.firstChild;
+    let selectedShape =event.target.dataset.shape;
+
+    let ticks = document.querySelectorAll(".tick ")
+
+    ticks.forEach((tick)=>{
+        tick.classList.remove("show")
+    })
+
+    currentTick.classList.add("show")
+    
+    localStorage.setItem("currentShape",JSON.stringify(selectedShape));
+
+}
+
 
 function selectedShape(){
     document.getElementById("shape-section").setAttribute("style","display: none;")
     document.getElementById("dimension-section").setAttribute("style","display: flex;")
     let dimensionLabel = document.getElementById("dimension-heading");
     let shape = JSON.parse(localStorage.getItem("currentShape"));
-    console.log(shape)
     dimensionLabel.innerHTML += shape[0].dimensionType;
 }
 
@@ -89,11 +79,7 @@ calculateButton.addEventListener("click",()=>displayInformation());
 
 function displayInformation(){
     let dimensionInput = document.getElementById("dimension-input")
-    console.log(userSelectedShape);
-
-    console.log(dimensionInput.value);
     let dimension = dimensionInput.value;
-    console.log(userSelectedShape)
     let area = userSelectedShape.area(dimension)
     
 
@@ -109,7 +95,7 @@ function displayInformation(){
 
 
     dimensionSymbol.innerHTML = userSelectedShape.dimensionSymbol;
-    dimensionValue.innerHTML = dimension;
+    dimensionValue.innerHTML = dimension + " cm";
     areaFormula.innerHTML = userSelectedShape.areaFormula;
     perimeterFormula.innerHTML = userSelectedShape.perimeterFormula;
 
