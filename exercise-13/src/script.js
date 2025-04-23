@@ -6006,7 +6006,7 @@ let friends = [{
 
 // Root element where the cards are added
 let root = document.getElementById("root")
-root.setAttribute("style","display: grid; grid-template-columns: repeat(3,1fr); gap: 0.9rem;")
+root.classList.add("root-container")
 
 
 // A Function to create a single card 
@@ -6015,29 +6015,29 @@ function createCard(friend){
     // Image tag
     let cardImage = document.createElement('img');
     cardImage.setAttribute('src',friend.img)
-    cardImage.setAttribute("style"," height: 100%; width: 100%; border-radius: 15rem;")
+    cardImage.classList.add("card-image")
 
 
     // Image Wrapper
     let imageWrapper = document.createElement("div")
-    imageWrapper.setAttribute("style"," width: 4.5rem; height: 4.5rem;");
+    imageWrapper.classList.add("card-image-wrapper")
 
     imageWrapper.appendChild(cardImage);
 
     // Email Content
     let email = document.createElement("h3")
+    email.classList.add("card-mail")
     email.innerText = friend.email;
-    email.setAttribute("style"," font-size: 0.95rem; font-weight: 200; line-height: 1.5rem")
 
     // Name Content
     let name = document.createElement("h2")
+    name.classList.add("card-name")
     name.innerText = friend.first_name + " " + friend.last_name;
-    name.setAttribute("style","font-size: 1.225rem; font-weight: 350;")
 
 
     // Card Content 
     let cardContent = document.createElement("div")
-    cardContent.setAttribute("style","padding: 0.8rem 1.35rem 1rem ;")
+    cardContent.classList.add("card-content")
 
     cardContent.appendChild(name);
     cardContent.appendChild(email);
@@ -6045,7 +6045,7 @@ function createCard(friend){
 
     // Card Element
     const card = document.createElement("div")
-    card.setAttribute("style"," background-color: #4C67B4; padding: 0.9rem 0.9rem 0.95rem; display: flex;")
+    card.classList.add("card")
     card.appendChild(imageWrapper);
     card.appendChild(cardContent)
 
