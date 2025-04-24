@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- Roboto Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- External Stylesheet -->
+     <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <main>
+        <!-- Logo  -->
+        <div class="logo-wrapper">
+            <img src="../public/Sirius_CDW_Cobranded_PMS2747-cropped.svg" alt="Sirius Logo" >
+        </div>
+        <div>
+            <!-- Start of Form -->
+            <form id="billing-form" class="billing-form">
+                <h2 class="heading">BILLING DETAILS</h2>
+                <div class="half-input-container">
+                    <!-- Start of Name input -->
+                    <div class="input-container half-input">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" class="first-name" >
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-container half-input"> 
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" class="last-name" >
+                        <span  class="error" ></span>
+                    </div>
+                    <!-- End of Name input -->
+                </div>
+                <!-- Email Input -->
+                <div class="input-container full-input">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="email">
+                    <span class="error" ></span>
+                </div>
+                <!-- Contact Number Input -->
+                <div class="input-container full-input">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="tel" id="contact-number" class="contact-number"  >
+                    <span class="error"></span>
+                </div>
+                <!-- Pincode Input -->
+                <div class="input-container full-input">
+                    <label for="pincode">PIN Code</label>
+                    <input type="text" id="pincode" class="pincode" >
+                    <span class="error"></span>
+                </div>
+                <h2 class="heading payment-division">PAYMENT DETAILS</h2>
+                <!-- Card Number Input -->
+                <div class="input-container full-input">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" class="card-number"   >
+                    <span class="error"></span>
+                </div>
+                <!-- Card Expiry Input -->
+                <div class="half-input-container">
+                    <div class="input-container half-input">
+                        <label for="card-expiry">Card Expiry (Year)</label>
+                        <input type="text" id="card-expiry" class="card-expiry"  >
+                        <span class="error"></span>
+                    </div>
+                    <!-- CVV Input -->
+                    <div class="input-container half-input">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" class="cvv"  >
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <input class="full-input submit-btn" type="submit" value="COMPLETE PAYMENT">
+            </form>
+            <!-- End of form -->
+        </div>
+    </main>
+    <!-- Script tag -->
+    <script src="../script/script.js"></script>
+</body>
+</html>
