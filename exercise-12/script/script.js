@@ -32,20 +32,28 @@ let data = [{
 ]
 
 
-let userSelectedShape = {};
 
 
 let shapes = document.getElementsByClassName("shape")
-
+console.log(shapes)
 for(shape of shapes){
-    shape.addEventListener("click",(event)=>chooseShape(event))
+    shape.addEventListener("click",(event)=>chooseShape(event),true)
 }
 
-let shapeSelectionButton = document.getElementById("next-button");
 
+// Next button in shape selection page
+let shapeSelectionButton = document.getElementById("next-button");
 shapeSelectionButton.addEventListener("click",()=>selectedShape())
 
 
+// Calculate Button
+let calculateButton = document.getElementById("calculate-button")
+calculateButton.addEventListener("click",()=>displayInformation());
+
+// Reset Button
+document.getElementById("reset-button").addEventListener("click", ()=>startAgain())
+
+// Choose shape with click 
 function chooseShape(event){
     let currentTick = event.target.firstChild;
     let selectedShape =event.target.dataset.shape;
@@ -55,14 +63,14 @@ function chooseShape(event){
     ticks.forEach((tick)=>{
         tick.classList.remove("show")
     })
-
-    currentTick.classList.add("show")
+    console.log(currentTick)
+    currentTick.classList.toggle("show")
     
     localStorage.setItem("currentShape",JSON.stringify(selectedShape));
 
 }
 
-
+// Select shape before moving to dimensions page
 function selectedShape(){
     document.getElementById("shape-section").setAttribute("style","display: none;")
     document.getElementById("dimension-section").setAttribute("style","display: flex;")
@@ -72,11 +80,8 @@ function selectedShape(){
 }
 
 
-let calculateButton = document.getElementById("calculate-button")
-calculateButton.addEventListener("click",()=>displayInformation());
 
-
-
+// Display the area and perimeter values
 function displayInformation(){
     let dimensionInput = document.getElementById("dimension-input")
     let dimension = dimensionInput.value;
@@ -107,8 +112,7 @@ function displayInformation(){
 
 }
 
-document.getElementById("reset-button").addEventListener("click", ()=>startAgain())
-
+// Start Again function
 function startAgain(){
     userSelectedShape = {};
 
