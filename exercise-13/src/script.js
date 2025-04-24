@@ -6009,6 +6009,17 @@ let root = document.getElementById("root")
 root.classList.add("root-container")
 
 
+// Fragment for card container
+let cardContainerFragment = new DocumentFragment();
+
+
+// Map all data of friends to execute the createCard function
+friends.forEach((friend)=>{
+    createCard(friend);
+})
+
+root.append(cardContainerFragment);
+
 // A Function to create a single card 
 function createCard(friend){
 
@@ -6051,12 +6062,6 @@ function createCard(friend){
 
 
     // Add card to root
-    root.appendChild(card);
+    cardContainerFragment.appendChild(card);
 }
 
-
-// Map all data of friends to execute the createCard function
-
-friends.map((friend)=>{
-    createCard(friend);
-})
