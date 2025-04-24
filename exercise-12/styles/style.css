@@ -58,6 +58,10 @@ main{
     align-items: center;
 }
 
+.shape{
+    position: relative;
+}
+
 .shape-selection_heading{
     font-size: 3rem;
     font-weight: 400;
@@ -98,6 +102,15 @@ main{
     transform: rotate(-45deg) translate(-0.5rem,4rem);
     border-bottom: 2px solid #FFF;
     border-left: 2px solid #FFF;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+.triangle-tick{
+    position: absolute;
+    top: 2rem;
+    left: -4.5rem;
 }
 
 .show{
@@ -106,11 +119,13 @@ main{
 
 
 .next-button{
-    /* visibility: hidden; */
     padding: 0.7rem 4.75rem;
     border-radius: 0.25rem;
 }
 
+.hidden{
+    visibility: hidden;
+}
 
 /* Dimension Section */
 

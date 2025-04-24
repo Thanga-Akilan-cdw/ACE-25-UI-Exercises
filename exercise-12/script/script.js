@@ -1,22 +1,22 @@
-
-let data = [{
+// Data for shape display
+let shapeData = [{
         shapeName: "Circle",
         dimensionType : "Radius",
         dimensionSymbol : "r",
-        areaFormula : "r * r",
-        perimeterFormula : "4 * r",
+        areaFormula : "3.14 * r * r",
+        perimeterFormula : "2 * 3.14 * r",
         
-        area: function(side){return (3.14*side*side);},
-        perimeter: function(side){ return (2*3.14*side);}
+        area: function(side){return ((3.14*side*side).toFixed(2));},
+        perimeter: function(side){ return (2*3.14*side).toFixed(2);}
     },
      {
         shapeName: "Triangle",
-        dimensionType : "Side",
+        dimensionType : "Side (Base & Height)",
         dimensionSymbol : "s",
         areaFormula : "0.433 * s * s",
         perimeterFormula : "4 * s",
 
-        area: function(side){return (0.433*side*side);},
+        area: function(side){return ((0.433*side*side).toFixed(2));},
         perimeter: function(side){ return (3*side);}
     },
      {
@@ -31,14 +31,17 @@ let data = [{
     }
 ]
 
+let currentShape;
+let userSelectedShape = {}
 
-
-
+// Shapes event listeners added
 let shapes = document.getElementsByClassName("shape")
-console.log(shapes)
 for(shape of shapes){
     shape.addEventListener("click",(event)=>chooseShape(event),true)
 }
+
+// Tick elements
+let ticks = document.querySelectorAll(".tick ")
 
 
 // Next button in shape selection page
@@ -56,9 +59,9 @@ document.getElementById("reset-button").addEventListener("click", ()=>startAgain
 // Choose shape with click 
 function chooseShape(event){
     let currentTick = event.target.firstChild;
-    let selectedShape =event.target.dataset.shape;
+    currentShape =event.target.dataset.shape;
+    shapeSelectionButton.classList.remove("hidden")
 
-    let ticks = document.querySelectorAll(".tick ")
 
     ticks.forEach((tick)=>{
         tick.classList.remove("show")
@@ -66,7 +69,6 @@ function chooseShape(event){
     console.log(currentTick)
     currentTick.classList.toggle("show")
     
-    localStorage.setItem("currentShape",JSON.stringify(selectedShape));
 
 }
 
@@ -75,8 +77,13 @@ function selectedShape(){
     document.getElementById("shape-section").setAttribute("style","display: none;")
     document.getElementById("dimension-section").setAttribute("style","display: flex;")
     let dimensionLabel = document.getElementById("dimension-heading");
-    let shape = JSON.parse(localStorage.getItem("currentShape"));
-    dimensionLabel.innerHTML += shape[0].dimensionType;
+    shapeData.forEach((data,index)=>{
+        if((data.shapeName).toLowerCase() == currentShape){
+            dimensionLabel.innerHTML = shapeData[index].dimensionType;
+            userSelectedShape = shapeData[index];
+            console.log(userSelectedShape)
+        }
+    })
 }
 
 
@@ -97,6 +104,12 @@ function displayInformation(){
     let areaValue =  document.getElementById("area-value");
     let perimeterFormula =  document.getElementById("perimeter-formula");
     let perimeterValue =  document.getElementById("perimeter-value");
+    let resultShape = document.getElementById("result-shape");
+    let resultHeading = document.getElementById("result-heading");
+
+    resultShape.classList.remove(...resultShape.classList)
+    resultShape.classList.add((userSelectedShape.shapeName).toLowerCase());
+    resultHeading.innerHTML = userSelectedShape.shapeName;
 
 
     dimensionSymbol.innerHTML = userSelectedShape.dimensionSymbol;
@@ -115,6 +128,10 @@ function displayInformation(){
 // Start Again function
 function startAgain(){
     userSelectedShape = {};
+    shapeSelectionButton.classList.add("hidden")
+    ticks.forEach((tick)=>{
+        tick.classList.remove("show")
+    })
 
     document.getElementById("result-section").setAttribute("style","display: none;")
     document.getElementById("shape-section").setAttribute("style","display: flex;")

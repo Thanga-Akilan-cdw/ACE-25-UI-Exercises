@@ -22,23 +22,23 @@
             <h2 class="shape-selection_heading">1. Choose a Shape</h2>
             <div class="shapes-container">
                 <div class="shape circle" data-shape="circle"><div class="tick"></div></div>
-                <div class="shape triangle" data-shape="triangle"><div class="tick"></div></div>
+                <div class="shape triangle" data-shape="triangle"><div class="tick triangle-tick"></div></div>
                 <div class="shape square" data-shape="square"><div class="tick"></div></div>
             </div>
-            <button id="next-button" class="button next-button">NEXT</button>
+            <button id="next-button" class="button next-button hidden">NEXT</button>
         </section>
         <!-- End of Shape Selection Section -->
          <!-- Beginning of Dimension Section  -->
         <section class="dimension-section" id="dimension-section">
-                <h2 class="dimension-heading" id="dimension-heading">2. Enter </h2>
+                <h2 class="dimension-heading" >2. Enter <span id="dimension-heading"></span> </h2>
                 <input id="dimension-input" class="dimension-input" type="text" >
                 <button id="calculate-button" class="button calculate-button">CALCULATE</button>
         </section>
         <!-- End of Dimension Section -->
          <!-- Beginning of Result Section -->
         <section id="result-section" class="result-section">
-            <div class="square"></div>
-            <h2 class="result-heading">Square</h2>
+            <div id="result-shape" ></div>
+            <h2 id="result-heading" class="result-heading"></h2>
             <table class="result-content-table">
                 <tr class="property-row">
                     <td class="result-property">SIDE</td>
