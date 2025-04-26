@@ -1,3 +1,4 @@
-import video from "../public/video.json"
 
-console.log(video.videoUrl)
+$.getJson("../public/video.json", function(){
+    conaole.log("hello");
+})
