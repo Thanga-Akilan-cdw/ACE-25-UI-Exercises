@@ -9,39 +9,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <!-- External Stylesheet -->
-     <link rel="stylesheet" src="../styles/style.css" >
+     <link rel="Stylesheet" href="../styles/style.css" >
 </head>
 <body>
     <header>
-        <h1>Blender Movies</h1>
-        <div class="my=profile">
-            <p>Steffy Jerry</p>
+        <h1 class="page-heading">Blender Movies</h1>
+        <div class="profile-container">
+            <p class="profile-name">Steffy Jerry</p>
             <div class="profile-pic-wrapper">
-                <img alt="profile-pic" >
+                <img id="profilePic" src="../public/images/reviewers/andy.png" alt="profile-pic" >
             </div>
         </div>
     </header>
     <main>
-        <div class="video-section"> 
-            <div class="video-wrapper">
-                <video >
+        <section>
+            <div class="video-container"> 
+                <div class="video-wrapper">
+                    <video controls id="videoComponent" >
+                </div>
+                <h2 id="videoTitle" class="video-title"></h2>
+                <p id="videoDescription" class="video-description"></p>
             </div>
-            <h2 id="videoTitle"></h2>
-            <p id="videoDescription"></p>
-        </div>
-        <div class="comments-section">
-            <p>Comments</p>
-            <!-- <div class="comment-component">
-                <div class="comment-img-wrapper">
-                    <img>
+            <hr>
+            <div class="comments-section">
+                <p>Comments</p>
+                <div id="commentsContainer">
                 </div>
-                <div class="comment-content">
-                    <p id="commentor-name" class="commentor-name"></p>
-                    <p class="comment-description"></p>
-                </div>
-            </div> -->
-        </div>
+            </div>
+        </section>
+        <section class="poster-section">
+            <h3>Upcoming Projects</h3>
+            <div id="posterSection" class="poster-container"></div>
+        </section>
     </main>
+    <footer>
+        <p>© Copyrights 2022</p>
+        <p class="footer-site-name">Blender Movies</p>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
 </body>
