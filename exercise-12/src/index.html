@@ -18,45 +18,45 @@
     </header>
     <main>
         <!-- Beginning of Shape Selection Section -->
-        <section class="shape-selection" id="shape-section">
+        <section  id="shapeSection" class="shape-selection">
             <h2 class="shape-selection_heading">1. Choose a Shape</h2>
             <div class="shapes-container">
                 <div class="shape circle" data-shape="circle"><div class="tick"></div></div>
                 <div class="shape triangle" data-shape="triangle"><div class="tick triangle-tick"></div></div>
                 <div class="shape square" data-shape="square"><div class="tick"></div></div>
             </div>
-            <button id="next-button" class="button next-button hidden">NEXT</button>
+            <button id="nextButton" class="button next-button hidden">NEXT</button>
         </section>
         <!-- End of Shape Selection Section -->
          <!-- Beginning of Dimension Section  -->
-        <section class="dimension-section" id="dimension-section">
-                <h2 class="dimension-heading" >2. Enter <span id="dimension-heading"></span> </h2>
-                <input id="dimension-input" class="dimension-input" type="text" >
-                <button id="calculate-button" class="button calculate-button">CALCULATE</button>
+        <section id="dimensionSection" class="dimension-section" >
+                <h2 class="dimension-heading" >2. Enter <span id="dimensionHeading"></span> </h2>
+                <input id="dimensionInput" class="dimension-input" type="number"  min="0" oninput="validity.valid||(value='');" >
+                <button id="calculateButton" class="button calculate-button">CALCULATE</button>
         </section>
         <!-- End of Dimension Section -->
          <!-- Beginning of Result Section -->
-        <section id="result-section" class="result-section">
-            <div id="result-shape" ></div>
-            <h2 id="result-heading" class="result-heading"></h2>
-            <table class="result-content-table">
+        <section id="resultSection" class="result-section">
+            <div id="resultShape" ></div>
+            <h2 id="resultHeading" class="result-heading"></h2>
+            <table id="resultTable" class="result-content-table">
                 <tr class="property-row">
                     <td class="result-property">SIDE</td>
-                    <td id="dimension-symbol" class="result-formula">s</td>
-                    <td id="dimension-value" class="result-value">5cm</td>
+                    <td id="dimensionSymbol" class="result-formula"></td>
+                    <td id="dimensionValue" class="result-value"></td>
                 </tr>
                 <tr class="property-row">
                     <td class="result-property">AREA</td>
-                    <td id="area-formula" class="result-formula">s * s</td>
-                    <td id="area-value" class="result-value">25 sq cm</td>
+                    <td id="areaFormula" class="result-formula"></td>
+                    <td id="areaValue" class="result-value"></td>
                 </tr>
                 <tr class="property-row">
                     <td class="result-property">PERIMETER</td>
-                    <td id="perimeter-formula" class="result-formula"></td>
-                    <td id="perimeter-value" class="result-value"> cm</td>
+                    <td id="perimeterFormula" class="result-formula"></td>
+                    <td id="perimeterValue" class="result-value"></td>
                 </tr>
             </table>
-            <button id="reset-button" class="button repeat-button">START AGAIN</button>
+            <button id="resetButton" class="button repeat-button">START AGAIN</button>
         </section>
         <!-- End of Result Section -->
     </main>

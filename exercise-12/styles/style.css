@@ -113,8 +113,8 @@ main{
     left: -4.5rem;
 }
 
-.show{
-    display: block;
+section.hide{
+    display: none;
 }
 
 
@@ -123,15 +123,17 @@ main{
     border-radius: 0.25rem;
 }
 
-.hidden{
-    visibility: hidden;
+.show .tick{
+    display: block;
 }
+
+
 
 /* Dimension Section */
 
 .dimension-section{
     height: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -167,7 +169,7 @@ main{
 .result-section{
     height: 100%;
     padding-top: 1rem;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -198,12 +200,12 @@ main{
 
 .result-formula{
     background-color: #455D7E;
-    padding: 1rem 5rem 1rem 1rem ;
+    padding: 1rem 1.75rem 1rem 1rem ;
 }
 
 .result-value{
     background-color: #3288FF;
-    padding: 1rem 2.5rem 1rem 1rem ;
+    padding: 1rem ;
 }
 
 .repeat-button{
