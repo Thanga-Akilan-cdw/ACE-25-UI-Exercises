@@ -32,30 +32,29 @@ let shapeData = {
     }
 }
 
-let currentShape;
+
 let userSelectedShape = {}
 
 // Shapes event listeners added
 let shapes = document.getElementsByClassName("shape")
 console.log(shapes)
-for(shape of shapes){
+for(let shape of shapes){
     shape.addEventListener("click",(event)=>chooseShape(event),true)
 }
 
 
-
 // Next button in shape selection page
 let shapeSelectionButton = document.getElementById("nextButton");
-shapeSelectionButton.addEventListener("click",()=>selectedShape())
 
+// shapeSelectionButton.classList.add("hidden");
+shapeSelectionButton.addEventListener("click",selectedShape)
 
 // Calculate Button
 let calculateButton = document.getElementById("calculateButton")
-calculateButton.addEventListener("click",()=>displayInformation());
+calculateButton.addEventListener("click",displayInformation);
 
 // Reset Button
-document.getElementById("resetButton").addEventListener("click", ()=>startAgain())
-
+document.getElementById("resetButton").addEventListener("click", startAgain)
 
 // Section elements
 let shapeSection = document.getElementById("shapeSection");
@@ -65,44 +64,41 @@ let resultSection = document.getElementById("resultSection");
 // Dimension Label
 let dimensionLabel = document.getElementById("dimensionHeading");
 
-// initial values
-resultSection.classList.add("hide")
-dimensionSection.classList.add("hide")
-
-// Choose shape with click 
-function chooseShape(event){
-    currentShape =event.target.dataset.shape;
-    shapeSelectionButton.classList.remove("hidden")
-
-    for(shape of shapes){
-        shape.classList.remove("show")
-    }
-    event.target.classList.add("show")
-    
-
-}
-
-// Select shape before moving to dimensions page
-function selectedShape(){
-    shapeSection.classList.add("hide")
-    dimensionSection.classList.remove("hide")
-
-    console.log(shapeData.currentShape)
-    console.log(currentShape)
-
-    userSelectedShape = shapeData[currentShape];
-    console.log(userSelectedShape);
-    dimensionLabel.innerText = userSelectedShape.dimensionType;
-}
-
 // dimension input
-let dimensionInput = document.getElementById("dimensionInput")
+let dimensionInput = document.getElementById("dimensionInput");
+dimensionInput.value = 0;
 
 // area element
 let areaElement = document.getElementById("areaValue")
 
 // Table element
 let table = document.getElementById("resultTable")
+
+// initial values
+resultSection.classList.add("hide")
+dimensionSection.classList.add("hide")
+
+
+
+// Choose shape with click 
+function chooseShape(event){
+    userSelectedShape = shapeData[event.target.dataset.shape];
+    shapeSelectionButton.classList.remove("hidden")
+    for(let shape of shapes){
+        shape.classList.remove("show")
+    }
+    event.target.classList.add("show")
+}
+
+
+
+
+// Select shape before moving to dimensions page
+function selectedShape(){
+    shapeSection.classList.add("hide")
+    dimensionSection.classList.remove("hide")
+    dimensionLabel.innerText = userSelectedShape.dimensionType;
+}
 
 
 
@@ -112,7 +108,6 @@ function displayInformation(){
     // Getting dimension  
     let dimension = dimensionInput.value;
     
-
     // adding shape
     resultShape.classList.remove(...resultShape.classList)
     resultShape.classList.add((userSelectedShape.shapeName).toLowerCase());
@@ -128,15 +123,15 @@ function displayInformation(){
 
     resultSection.classList.remove("hide")
     dimensionSection.classList.add("hide")
-
 }
+
 
 // Start Again function
 function startAgain(){
     userSelectedShape = {};
-    dimensionInput.value = "";
+    dimensionInput.value = 0;
     shapeSelectionButton.classList.add("hidden")
-    for(shape of shapes){
+    for(let shape of shapes){
         shape.classList.remove("show")
     }
 

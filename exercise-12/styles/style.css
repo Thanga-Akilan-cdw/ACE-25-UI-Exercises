@@ -117,6 +117,10 @@ section.hide{
     display: none;
 }
 
+.hidden{
+    display: none;
+}
+
 
 .next-button{
     padding: 0.7rem 4.75rem;
@@ -153,6 +157,12 @@ section.hide{
     padding: 0.775rem 2rem;
     width: 45rem;
     margin-top: 3.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .dimension-input:focus{
@@ -195,12 +205,12 @@ section.hide{
 
 .result-property{
     background-color: #0D62D6;
-    padding: 1rem 5.5rem 1rem 1rem ;
+    padding: 1rem 5.2rem 1rem 1rem ;
 }
 
 .result-formula{
     background-color: #455D7E;
-    padding: 1rem 1.75rem 1rem 1rem ;
+    padding: 1rem ;
 }
 
 .result-value{
