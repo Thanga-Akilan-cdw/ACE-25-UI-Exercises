@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Kids Exercise</title>
+    <!-- Roboto Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- External Stylesheet -->
+     <link rel="stylesheet" href="../styles/style.css" >
+</head>
+<body>
+    <header>
+        <h1 class="heading">MATH KIDS</h1>
+        <h2 class="heading">KIDS LEARNING APP</h2>
+    </header>
+    <main>
+        <!-- Beginning of Shape Selection Section -->
+        <section  id="shapeSection" class="shape-selection">
+            <h2 class="shape-selection_heading">1. Choose a Shape</h2>
+            <div class="shapes-container">
+                <div class="shape circle" data-shape="circle"><div class="tick"></div></div>
+                <div class="shape triangle" data-shape="triangle"><div class="tick triangle-tick"></div></div>
+                <div class="shape square" data-shape="square"><div class="tick"></div></div>
+            </div>
+            <button id="nextButton" class="button next-button hidden">NEXT</button>
+        </section>
+        <!-- End of Shape Selection Section -->
+         <!-- Beginning of Dimension Section  -->
+        <section id="dimensionSection" class="dimension-section" >
+                <h2 class="dimension-heading" >2. Enter <span id="dimensionHeading"></span> </h2>
+                <input id="dimensionInput" class="dimension-input" type="number"  min="0" oninput="validity.valid||(value='');" >
+                <button id="calculateButton" class="button calculate-button">CALCULATE</button>
+        </section>
+        <!-- End of Dimension Section -->
+         <!-- Beginning of Result Section -->
+        <section id="resultSection" class="result-section">
+            <div id="resultShape" ></div>
+            <h2 id="resultHeading" class="result-heading"></h2>
+            <table id="resultTable" class="result-content-table">
+                <tr class="property-row">
+                    <td class="result-property">SIDE</td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"></td>
+                </tr>
+                <tr class="property-row">
+                    <td class="result-property">AREA</td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"></td>
+                </tr>
+                <tr class="property-row">
+                    <td class="result-property">PERIMETER</td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"></td>
+                </tr>
+            </table>
+            <button id="resetButton" class="button repeat-button">START AGAIN</button>
+        </section>
+        <!-- End of Result Section -->
+    </main>
+    <script src="../script/script.js"></script>
+</body>
+</html>
+

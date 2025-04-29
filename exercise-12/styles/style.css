@@ -1,0 +1,224 @@
+/*    Declaring Variables    */
+:root{
+    --background-color: #000;
+    --text-color: #FFF;
+}
+
+/*    Resetting defaults    */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Roboto",Arial, Helvetica ;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #A9E087;
+    height: 4.5rem;
+    padding: 1.5rem 1.75rem 1rem 2rem;
+}
+
+.heading{
+    display: inline;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+main{
+    height: 92%;
+    background-color: #000;
+}
+
+
+.button{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+
+}
+
+/* ==== Shape Selection Section ====*/
+
+.shape-selection{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape{
+    position: relative;
+}
+
+.shape-selection_heading{
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.shapes-container{
+    display: flex;
+    gap: 4.2rem;
+    margin: 6.2rem 0 5.35rem;
+}
+
+.circle{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #00987D;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-bottom: 9.7rem solid #FFABDC;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+}
+
+.square{
+    width: 9.7rem;
+    height: 9.7rem;
+    background-color: #E0E0E0;
+}
+
+.tick{
+    display: none;
+    width: 50px;
+    height: 20px;
+    transform: rotate(-45deg) translate(-0.5rem,4rem);
+    border-bottom: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+.triangle-tick{
+    position: absolute;
+    top: 2rem;
+    left: -4.5rem;
+}
+
+section.hide{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.next-button{
+    padding: 0.7rem 4.75rem;
+    border-radius: 0.25rem;
+}
+
+.show .tick{
+    display: block;
+}
+
+
+
+/* Dimension Section */
+
+.dimension-section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.75rem;
+}
+
+.dimension-heading{
+    font-size: 3.25rem;
+    font-weight: 300;
+}
+
+.dimension-input{
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    font-size: 3rem;
+    padding: 0.775rem 2rem;
+    width: 45rem;
+    margin-top: 3.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dimension-input:focus{
+    outline: none;
+}
+
+.calculate-button{
+    padding: 0.7rem 2.25rem;
+    margin-top: 3.25rem;
+}
+
+/*  Result Section  */
+
+.result-section{
+    height: 100%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.result-heading{
+    font-size: 3rem;
+    font-weight: 350;
+    padding-top: 2rem;
+}
+
+.result-content-table{
+    border-collapse: separate;
+    border-spacing: 0 1.175rem;
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+
+.property-row{
+    line-height: 0.85rem;
+}
+
+.result-property{
+    background-color: #0D62D6;
+    padding: 1rem 5.2rem 1rem 1rem ;
+}
+
+.result-formula{
+    background-color: #455D7E;
+    padding: 1rem ;
+}
+
+.result-value{
+    background-color: #3288FF;
+    padding: 1rem ;
+}
+
+.repeat-button{
+    margin-top: 4rem;
+    padding: 0.75rem 2rem;
+}
