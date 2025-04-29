@@ -107,6 +107,7 @@ function displayInformation(){
 
     // Getting dimension  
     let dimension = dimensionInput.value;
+    if((!(dimension==="" || dimension==0))){
     
     // adding shape
     resultShape.classList.remove(...resultShape.classList)
@@ -122,7 +123,7 @@ function displayInformation(){
     table.rows[2].cells[2].innerText = userSelectedShape.perimeter(dimension) + " cm";
 
     resultSection.classList.remove("hide")
-    dimensionSection.classList.add("hide")
+    dimensionSection.classList.add("hide")}
 }
 
 
