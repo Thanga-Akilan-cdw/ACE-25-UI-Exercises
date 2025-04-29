@@ -8,6 +8,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -22,20 +23,22 @@ body{
 /* Introduction Section */
 
 .title-container{
-    padding: 14.75em 0 6.65em; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    height: 28rem;
+    padding-bottom: 6.25rem;
 }
 
 .mail-contact_desktop{
+    margin-top: 4rem;
     display: none;
 }
 
 .main-heading{
-    font-size: 3.2rem;
-    font-weight: 200;
+    font-size: 2.7rem;
+    font-weight: 250;
     letter-spacing: 0.2rem;
 }
 
@@ -45,10 +48,10 @@ body{
 
 .sub-heading{
     color: #CECECE;
-    font-size: 2.05em;
+    font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 0.075rem;
-    margin-top: .57em;
+    margin-top: 1rem;
 }
 
 .sub-heading span{
@@ -57,8 +60,9 @@ body{
 
 .mail-contact{
     margin-top: .5em;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 550;
+    color: #F9F9F9;
 }
 
 
@@ -71,20 +75,21 @@ body{
 }
 
 .image-container img{
-    width: min(80%,27.05rem);
+    width: min(90%);
     margin-bottom: 1em;
 }
 
 /* Brands Section */
 
 .logo-container{
-    text-align: center;
-    margin: 3.85rem 1rem 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .logo-header{
-    font-size: 2.15em;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #CECECE;
 }
@@ -96,12 +101,15 @@ body{
 .logo-content{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    column-gap: 2rem;
     margin-top: 3.2em;
 }
 
 .logo-wrapper{
+    display: flex;
+    justify-content: center;
     width: 9.5rem;
     height: auto;
 
@@ -113,12 +121,8 @@ body{
     margin: 1.5rem 0 4rem;
 }
 
-.left-logo{
-    margin-right: 1.5rem;
-}
-
-.right-logo{
-    margin-left: 2rem;
+hr{
+    width: 25%;
 }
 
 .logo[alt="Spotify"]{
@@ -188,7 +192,15 @@ footer{
 @media screen and (min-width: 768px) {
 
     body{
-        margin: 4.15rem 0;
+        /* margin: 4.15rem 0; */
+    }
+
+    main{
+        width: 85.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     /* Introduction Section */
@@ -201,13 +213,13 @@ footer{
     }
 
     .main-heading{
-        font-size: 10.85em;
+        font-size: 10.5rem;
         font-weight: 300;
-        letter-spacing: -1px;
+        letter-spacing: 0;
     }
 
     .title-container{
-        padding: 7.75em 0 6.8em;
+        height: 32rem;
     }
     .sub-heading{
         padding-top: 0.65rem;
@@ -221,18 +233,19 @@ footer{
     /* Image Section */
 
     .image-container{
-        gap: 1.2em 2.2rem;
+        gap: 1.2em 2.15rem;
         margin-top: 3.15em;
     }
 
-    .image-container img{
-        width: 27.05rem;
-    }
 
     /* Brands Section */
 
     .logo-container{
-        padding-top: 8.515rem;
+        height: 47rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .logo-header{
         font-size: 3.2em;
@@ -240,8 +253,7 @@ footer{
     }
 
     .logo-content{
-        margin: 0 1em 16.25em 1em;
-        padding-top: 7rem;
+        margin-bottom: 16.25rem;
     }
 
     .logo{
@@ -258,10 +270,13 @@ footer{
         margin-left: 2.25em;
     }
 
-    logo[alt="Mont Blanc"]{
+    .logo[alt="Mont Blanc"]{
         margin-left: 2.55em;
     }
 
+    hr{
+        width: 19rem;
+    }
     /* Socials Section */
 
     .footer-content{
