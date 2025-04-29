@@ -1,4 +1,5 @@
 
+/* Restoring Defaults */
 *{
     margin: 0;
     padding: 0;
@@ -12,14 +13,24 @@ header, main, footer{
 }
 
 header{
-    height: 4rem;
+    height: 4.55rem;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 0px 8px 2px #CCCCCC; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #FFF;
+    width: 78%;
 }
 
 main{
+    margin-top: 4.55rem;
     background-color: #F5F5F5;
 }
+
+/* Nav Bar */
 
 .page-heading{
     font-size: 1.1rem;
@@ -44,6 +55,13 @@ main{
     border-radius: 50%;
 }
 
+/* Video Section */
+
+.video-container{
+    margin: 1rem 0 1.5rem;
+}
+
+
 .video-wrapper{
     width: 55rem;
     height: 25rem;
@@ -62,27 +80,38 @@ main{
 
 .video-description{
     font-size: 0.8rem;
+    font-weight: 350;
     line-height: 1.25rem;
-    margin-bottom: 1rem;
 }
 
+/* Comments Section */
 
 .comments-section{
     margin-top: 1rem;
+}
+
+.comment-title{
+    font-size: 1.15rem;
 }
 
 .comments-section > p{
     font-weight: 600;
 }
 
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    margin-top: 1rem;
+}
+
 .comment-component{
     display: flex;
-    margin: 1rem 0;
 }
 
 .comment-img-wrapper{
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
 }
 
 .comment-img-wrapper img{
@@ -106,6 +135,8 @@ main{
     font-size: 0.725rem;
     line-height: 1.1rem;
 }
+
+/* Poster Section */
 
 .poster-section{
     margin: 1.5rem 0;
@@ -136,6 +167,9 @@ main{
 
 }
 
+
+/* Footer Section */
+
 footer{
     display: flex;
     justify-content: space-between;
@@ -147,6 +181,8 @@ footer{
 }
 
 
+/* Media Query for Mobile Devices */
+
 @media screen and (max-width: 769px) {
 
     header, main, footer{
@@ -157,6 +193,7 @@ footer{
         flex-direction: column;
     }
 
+    /* Video Section */
 
     .video-wrapper{
         margin-top: 1rem;
@@ -164,10 +201,14 @@ footer{
         height: auto;
     }
 
+    /* Poster Section */
+
     .poster-wrapper{
         width: 100%;
         height: auto;
     }
+
+    /* Footer Section */
 
     footer{
         height: 4.5rem;

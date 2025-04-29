@@ -1,12 +1,17 @@
 
+// Execute when doc is ready
+
 $(document).ready(function() {
+    // Get JSON Data for Video
     $.getJSON('../public/video.json', function(data) {
-        console.log(data);
         $('#videoComponent').attr("src",data.videoUrl)
         $('#videoTitle').text(data.title)
         $('#videoDescription').text(data.description);
+
+        //Load the Comments
       $.each(data.comments, function(index, comment) {
         console.log(index, comment)
+        // Comment Component 
         const commentUI = `
         <div class="comment-component">
                 <div class="comment-img-wrapper">
@@ -19,17 +24,21 @@ $(document).ready(function() {
             </div>
         `;
 
+        // Append to container
         $('#commentsContainer').append(commentUI);
       });
     });
 
+    // Get JSON Data for Posters
     $.getJSON('../public/posters.json',function(posters){
         $.each(posters, function(index,poster){
-            console.log(poster)
+            // Poster Component
             const posterUI = `
             <div class="poster-wrapper">
                 <img src=${poster.imageUrl} alt=${poster.title}/>
             </div>`
+
+            // Append to container
             $("#posterSection").append(posterUI);
         })
     })

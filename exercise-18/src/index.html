@@ -25,29 +25,37 @@
     <!-- End of Nav Bar -->
     <main>
         <section>
+            <!-- Start of Video Container -->
             <div class="video-container"> 
                 <div class="video-wrapper">
-                    <video controls id="videoComponent" >
+                    <video controls id="videoComponent" poster="../public/images/thumbnail/sintel.png">
                 </div>
                 <h2 id="videoTitle" class="video-title"></h2>
                 <p id="videoDescription" class="video-description"></p>
             </div>
+            <!-- End of Video Container -->
             <hr>
+            <!-- Start of Comments Section -->
             <div class="comments-section">
-                <p>Comments</p>
-                <div id="commentsContainer">
+                <p class="comment-title">Comments</p>
+                <div id="commentsContainer" class="comments-container">
                 </div>
             </div>
+            <!-- End of Comments Section -->
         </section>
+        <!-- Start of Poster Section -->
         <section class="poster-section">
             <h3>Upcoming Projects</h3>
             <div id="posterSection" class="poster-container"></div>
         </section>
+        <!-- End of Poster Section -->
     </main>
+    <!-- Start of Footer -->
     <footer>
         <p>© Copyrights 2022</p>
         <p class="footer-site-name">Blender Movies</p>
     </footer>
+    <!-- End of Footer  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../scripts/script.js"></script>
 </body>
