@@ -32,7 +32,6 @@ body{
 }
 
 .mail-contact_desktop{
-    margin-top: 4rem;
     display: none;
 }
 
@@ -75,7 +74,7 @@ body{
 }
 
 .image-container img{
-    width: min(90%);
+    width: 90%;
     margin-bottom: 1em;
 }
 
@@ -197,6 +196,7 @@ footer{
     /* Introduction Section */
 
     .mail-contact_desktop{
+        margin-top: 4.25rem;
         font-size: 1.775rem;
         font-weight: 600;
         display: flex;
@@ -204,16 +204,17 @@ footer{
     }
 
     .main-heading{
-        font-size: 10.5rem;
+        font-size: 11rem;
         font-weight: 300;
-        letter-spacing: 0;
+        letter-spacing: -2px;
     }
 
     .title-container{
-        height: 32rem;
+        height: 31.75rem;
+        padding-bottom: 7rem;
     }
     .sub-heading{
-        padding-top: 0.65rem;
+        margin-top: 0.65rem;
         font-size: 3.35rem;
         letter-spacing: 2px;
     }
@@ -228,47 +229,65 @@ footer{
         margin-top: 3.15em;
     }
 
+    .image-container img{
+        width: 27.05rem;
+    }
+
 
     /* Brands Section */
 
     .logo-container{
-        height: 47rem;
+        height: 42rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .logo-header{
         font-size: 3.2em;
         letter-spacing: 1px;
+        margin-top: 8.35rem;
     }
 
     .logo-content{
-        margin-bottom: 16.25rem;
+        width: 100%;
+        margin-top: 8.25rem;
+        justify-content: space-evenly;
+    }
+
+    .logo-wrapper{
+        height: 2rem;
     }
 
     .logo{
         margin: 0.5em 2em;
-        scale: 1.3;
+        scale: 1.4;
+        height: 100%;
     }
 
     .logo[alt="Adidas"]{
-        scale: 1.5;
+        scale: 2.75;
     }
 
 
-    .logo[alt="Lufthansa"]{
-        margin-left: 2.25em;
-    }
+    /* .logo[alt="Lufthansa"]{
+            height
+
+    } */
 
     .logo[alt="Mont Blanc"]{
-        margin-left: 2.55em;
+        scale: 2;
     }
 
     hr{
         width: 19rem;
     }
     /* Socials Section */
+
+
+    .footer-logo{
+        width: 0.5rem;
+    }
 
     .footer-content{
         gap: 1.25%;
