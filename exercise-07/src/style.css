@@ -85,13 +85,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    height: 38.35rem;
 }
 
 
 .logo-header{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #CECECE;
+    margin-top: 3.5rem;
 }
 
 .logo-header span{
@@ -103,47 +106,35 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 2rem;
-    margin-top: 3.2em;
+    column-gap: 6rem;
+    row-gap: 4rem;
+    margin-top: 4.55rem;
 }
 
 .logo-wrapper{
     display: flex;
     justify-content: center;
-    width: 9.5rem;
-    height: auto;
+    height: 1.75rem;
+    width: auto;
+}
 
+.height-extension-wrapper{
+    height: 3rem;
+}
+
+.width-extension-wrapper{
+    width: 6rem;
 }
 
 .logo{
-    width: 80%;
-    height: max-content;
-    margin: 1.5rem 0 4rem;
+    width: 100%;
+    object-fit: contain;
 }
 
 hr{
-    width: 25%;
+    width: 10rem;
 }
 
-.logo[alt="Spotify"]{
-    width: 6.5rem;
-}
-
-
-.logo[alt="Adidas"]{
-    width: 4rem;
-}
-
-.logo[alt="Audi"]{
-    width: 5.5rem;
-}
-
-.logo[alt="IKEA"]{
-    width: 7rem;
-}
-.logo[alt="Mont Blanc"]{
-    width: 5.5rem;
-}
 
 /* Socials Section */
 
