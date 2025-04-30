@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Roboto", Arial, Helvetica;
+  font-family: "Roboto Condensed", Arial, Helvetica;
   background-color: #000;
   color: #FFF;
   display: flex;
@@ -18,11 +18,11 @@ body main {
   align-items: center;
 }
 body main .mail-contact_desktop {
-  display: block;
   align-self: flex-end;
-  margin-top: 3rem;
-  font-size: 1.5rem;
-  font-weight: 800;
+  margin-top: 4.25rem;
+  font-size: 1.775rem;
+  font-weight: 600;
+  display: flex;
 }
 body main .title-container {
   display: flex;
@@ -34,8 +34,8 @@ body main .title-container {
   margin-top: 6rem;
 }
 body main .title-container .main-heading {
-  font-size: 9rem;
-  font-weight: 150;
+  font-size: 11rem;
+  font-weight: 250;
 }
 body main .title-container .main-heading .main-heading_highlight {
   font-weight: 700;
@@ -137,7 +137,7 @@ body footer .footer-note {
 
 @media screen and (max-width: 768px) {
   body {
-    padding: 0 16%;
+    padding: 0;
   }
   body main {
     display: flex;
@@ -146,5 +146,42 @@ body footer .footer-note {
   }
   body main .mail-contact_desktop {
     display: none;
+  }
+  body main .title-container {
+    justify-content: flex-end;
+    height: 21.5rem;
+    padding-bottom: 6.25rem;
+  }
+  body main .title-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: 250;
+    letter-spacing: 0.2rem;
+  }
+  body main .title-container .main-heading .main-heading_highlight {
+    font-weight: 600;
+  }
+  body main .title-container .sub-heading {
+    color: #CECECE;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    margin-top: 1rem;
+  }
+  body main .title-container .mail-contact {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1rem;
+    font-weight: 550;
+    color: #F9F9F9;
+  }
+  body main .image-container img {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+  body main .logo-container .logo-content {
+    margin-top: 4.55rem;
+  }
+  body main .logo-container .logo-content .logo-wrapper {
+    height: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
