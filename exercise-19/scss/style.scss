@@ -1,0 +1,213 @@
+
+$breakpoint-tablet: 768px;
+
+$background-color: #000;
+$font-color: #FFF;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", Arial, Helvetica;
+    background-color: $background-color;
+    color: $font-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .mail-contact_desktop{
+            display: block;
+            align-self: flex-end;
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            
+        }
+
+
+        .title-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 31.75rem;
+            padding-bottom: 7rem;
+            margin-top: 6rem;
+
+
+
+
+            .main-heading{
+                font-size: 9rem;
+                font-weight: 150;
+
+                .main-heading_highlight{
+                    font-weight: 700;
+                }
+            }
+
+            .sub-heading{
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: 3px;
+
+                span{
+                    color: #4B8FE2;
+                }
+            }
+
+            .mail-contact{
+                display: none;
+            }
+        }
+
+
+        .image-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+
+
+            img{
+                width: 27.05rem;
+            }
+        }
+
+
+        .logo-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 38.35rem;
+
+
+            .logo-header{
+                font-size: 2rem;
+                font-weight: 600;
+                color: #CECECE;
+                margin-top: 3.5rem;
+
+                span{
+                    color: #b8e887;
+                }
+                
+            }
+
+
+            .logo-content{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 9rem;
+                row-gap: 5rem;
+                margin-top: 9.55rem;
+
+
+                .logo-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    height: 2.5rem;
+                    width: auto;
+
+
+                    .logo{
+                        height: 100%;
+                        object-fit: contain;
+
+                    }
+                }
+
+                .height-extension-wrapper{
+                    height: 3rem;
+                }
+                
+                .width-extension-wrapper{
+                    width: 6rem;
+                }
+            }
+        }
+    }
+
+    hr{
+        width: 19rem;
+    }
+
+    footer{
+        text-align: center;
+
+        .footer-content{
+            display: flex;
+            gap: 1.35rem;
+            justify-content: center;
+            width: 100%;
+            margin-top: 3em;
+
+            .footer-logo{
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                border: 1px solid #FFF;
+
+
+                .fa-brands{
+                    font-size: 2em;
+                }
+
+            }
+        }
+        .footer-note{
+            display: block;
+            margin: 2.5em 0 2.05em;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: $breakpoint-tablet){
+    body{
+        padding: 0 16%;
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+
+            .mail-contact_desktop{
+                display: none;
+            }
+
+            .title-container{
+
+                
+            }
+        }
+    }
+}
