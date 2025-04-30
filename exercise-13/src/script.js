@@ -1,8 +1,9 @@
 
 
 //Friends data JSON
+displayCards();
 
-let friends;
+// Retrieve Json data
 async function getFriends(){
     const response = await fetch("../public/Friends.json")
 
@@ -12,41 +13,8 @@ async function getFriends(){
     return friends;
 }
 
-getFriends()
-
-console.log(friends)
-
-
-async function displayCards(){
-    let friends = await getFriends();
-
-
-await friends.forEach((friend)=>{
-    createCard(friend);
-})
-
-}
-
-displayCards();
-
-// Root element where the cards are added
-let root = document.getElementById("root")
-root.classList.add("root-container")
-
-
-// Fragment for card container
-let cardContainerFragment = new DocumentFragment();
-
-
-// Map all data of friends to execute the createCard function
-// friends.forEach((friend)=>{
-//     createCard(friend);
-// })
-
-root.append(cardContainerFragment);
-
 // A Function to create a single card 
-function createCard(friend){
+function createCard(friend, cardContainerFragment){
 
     // Image tag
     let cardImage = document.createElement('img');
@@ -90,4 +58,26 @@ function createCard(friend){
     // Add card to root
     cardContainerFragment.appendChild(card);
 }
+
+// Display the cards
+async function displayCards(){
+
+    // Root element where the cards are added
+    let root = document.getElementById("root")
+    root.classList.add("root-container")
+
+    // Fragment for card container
+    let cardContainerFragment = new DocumentFragment();
+
+    // Map all data of friends to execute the createCard function
+    let friends = await getFriends();
+    friends.forEach((friend)=>{
+        createCard(friend, cardContainerFragment);
+    })
+    root.append(cardContainerFragment);
+
+}
+
+
+
 
