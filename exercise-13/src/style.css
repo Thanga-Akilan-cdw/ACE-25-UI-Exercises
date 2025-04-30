@@ -8,13 +8,13 @@
 
 
 body{
-    font-family: "Roboto",Arial, Helvetica;
+    font-family: "Open Sans",Arial, Helvetica;
     color: #FFF;
 }
 
 header{
     background-color: #3b1c67;
-    padding: 2.15rem 2.2rem;
+    padding: 2.05rem 2.2rem;
 }
 
 /* TitleBar Section */
@@ -68,10 +68,11 @@ main{
 .card-name{
     font-size: 1.2rem;
     font-weight: 400;
+    letter-spacing: -1px;
 }
 
 .card-mail{
     font-size: 0.95rem;
     font-weight: 250;
-    margin-top: 0.3rem;
+    margin-top: 0.1rem;
 }
