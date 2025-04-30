@@ -8,6 +8,9 @@ $(document).ready(function() {
         $('#videoTitle').text(data.title)
         $('#videoDescription').text(data.description);
 
+        // Create Fragment for cards
+        const cardsFragment = $(document.createDocumentFragment());
+
         //Load the Comments
       $.each(data.comments, function(index, comment) {
         console.log(index, comment)
@@ -24,13 +27,19 @@ $(document).ready(function() {
             </div>
         `;
 
-        // Append to container
-        $('#commentsContainer').append(commentUI);
+        // Append to Fragment
+        $(cardsFragment).append(commentUI);
       });
+      // Append the fragment to container
+      $('#commentsContainer').append(cardsFragment);
     });
 
     // Get JSON Data for Posters
     $.getJSON('../public/posters.json',function(posters){
+
+        // Create fragment for posters
+        const postersFragment = $(document.createDocumentFragment());
+
         $.each(posters, function(index,poster){
             // Poster Component
             const posterUI = `
@@ -38,9 +47,11 @@ $(document).ready(function() {
                 <img src=${poster.imageUrl} alt=${poster.title}/>
             </div>`
 
-            // Append to container
-            $("#posterSection").append(posterUI);
+            // Append to Fragment
+            $(postersFragment).append(posterUI);
         })
+        // APpend the fragment to container
+        $("#posterSection").append(postersFragment);
     })
   });
 
