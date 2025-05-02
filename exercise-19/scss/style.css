@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", Arial, Helvetica;
+  background-color: #000;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .mail-contact_desktop {
+  align-self: flex-end;
+  margin-top: 4.25rem;
+  font-size: 1.775rem;
+  font-weight: 600;
+  display: flex;
+}
+body main .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 31.75rem;
+  padding-bottom: 7rem;
+  margin-top: 6rem;
+}
+body main .title-container .main-heading {
+  font-size: 11rem;
+  font-weight: 250;
+}
+body main .title-container .main-heading .main-heading_highlight {
+  font-weight: 700;
+}
+body main .title-container .sub-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+body main .title-container .sub-heading span {
+  color: #4B8FE2;
+}
+body main .title-container .mail-contact {
+  display: none;
+}
+body main .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+body main .image-container img {
+  width: 27.05rem;
+}
+body main .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 38.35rem;
+}
+body main .logo-container .logo-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #CECECE;
+  margin-top: 3.5rem;
+}
+body main .logo-container .logo-header span {
+  color: #b8e887;
+}
+body main .logo-container .logo-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
+  row-gap: 5rem;
+  margin-top: 9.55rem;
+}
+body main .logo-container .logo-content .logo-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  width: auto;
+}
+body main .logo-container .logo-content .logo-wrapper .logo {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .logo-container .logo-content .height-extension-wrapper {
+  height: 3rem;
+}
+body main .logo-container .logo-content .width-extension-wrapper {
+  width: 6rem;
+}
+body hr {
+  width: 19rem;
+}
+body footer {
+  text-align: center;
+}
+body footer .footer-content {
+  display: flex;
+  gap: 1.35rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3em;
+}
+body footer .footer-content .footer-logo {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+}
+body footer .footer-content .footer-logo .fa-brands {
+  font-size: 2em;
+}
+body footer .footer-note {
+  display: block;
+  margin: 2.5em 0 2.05em;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  body main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .mail-contact_desktop {
+    display: none;
+  }
+  body main .title-container {
+    justify-content: flex-end;
+    height: 21.5rem;
+    padding-bottom: 6.25rem;
+  }
+  body main .title-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: 250;
+    letter-spacing: 0.2rem;
+  }
+  body main .title-container .main-heading .main-heading_highlight {
+    font-weight: 600;
+  }
+  body main .title-container .sub-heading {
+    color: #CECECE;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    margin-top: 1rem;
+  }
+  body main .title-container .mail-contact {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1rem;
+    font-weight: 550;
+    color: #F9F9F9;
+  }
+  body main .image-container img {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+  body main .logo-container .logo-content {
+    margin-top: 4.55rem;
+  }
+  body main .logo-container .logo-content .logo-wrapper {
+    height: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
