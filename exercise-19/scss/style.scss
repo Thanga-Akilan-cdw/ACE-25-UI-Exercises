@@ -1,56 +1,68 @@
 
+// Variables 
 $breakpoint-tablet: 768px;
-
 $background-color: #000;
 $font-color: #FFF;
 
+// Mixin for flex 
+@mixin flex-container($direction, $wrap: nowrap){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+
+    @if $direction==row {
+        flex-wrap: $wrap;
+    }
+}
 
 
+// Mixin for font size and weight
+
+@mixin font($size,$weight : 400,$letter-spacing: normal){
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
+}
+
+
+// Resetting defaults
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 body{
     font-family: "Roboto Condensed", Arial, Helvetica;
     background-color: $background-color;
     color: $font-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-container(column);
 
     main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-container(column);
 
 
         .mail-contact_desktop{
+            display: flex;
             align-self: flex-end;
             margin-top: 4.25rem;
-            font-size: 1.775rem;
-            font-weight: 600;
-            display: flex;
+            @include font(1.775rem, 600);
             
         }
 
 
         .title-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex-container(column);
             height: 31.75rem;
             padding-bottom: 7rem;
             margin-top: 6rem;
 
 
-
-
             .main-heading{
-                font-size: 11rem;
-                font-weight: 250;
+                @include font(11rem, 250);
 
                 .main-heading_highlight{
                     font-weight: 700;
@@ -58,9 +70,7 @@ body{
             }
 
             .sub-heading{
-                font-size: 3rem;
-                font-weight: 600;
-                letter-spacing: 3px;
+                @include font(3rem, 600, 3px);
 
                 span{
                     color: #4B8FE2;
@@ -72,11 +82,10 @@ body{
             }
         }
 
+        // Image section 
 
         .image-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include flex-container(row, wrap);
             gap: 1.5rem;
 
 
@@ -85,18 +94,16 @@ body{
             }
         }
 
+        // Logo section
 
         .logo-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex-container(column);
             justify-content: flex-start;
             height: 38.35rem;
 
 
             .logo-header{
-                font-size: 2rem;
-                font-weight: 600;
+                @include font(2rem, 600);
                 color: #CECECE;
                 margin-top: 3.5rem;
 
@@ -108,18 +115,14 @@ body{
 
 
             .logo-content{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
+                @include flex-container(row, wrap);
                 column-gap: 9rem;
                 row-gap: 5rem;
                 margin-top: 9.55rem;
 
 
                 .logo-wrapper{
-                    display: flex;
-                    justify-content: center;
+                    @include flex-container(row);
                     height: 2.5rem;
                     width: auto;
 
@@ -150,18 +153,15 @@ body{
         text-align: center;
 
         .footer-content{
-            display: flex;
+            @include flex-container(row);
             gap: 1.35rem;
-            justify-content: center;
             width: 100%;
             margin-top: 3em;
 
             .footer-logo{
                 width: 3rem;
                 height: 3rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-container(row);
                 border-radius: 50%;
                 border: 1px solid #FFF;
 
@@ -175,8 +175,7 @@ body{
         .footer-note{
             display: block;
             margin: 2.5em 0 2.05em;
-            font-size: 1.5em;
-            font-weight: 500;
+            @include font(1.5rem, 500);
         }
     }
 }
@@ -188,15 +187,14 @@ body{
 
 
 
-@media screen and (max-width: $breakpoint-tablet){
+// @media screen and (max-width: $breakpoint-tablet){
+@include breakpoint(453px $breakpoint-tablet){
     body{
         padding: 0;
 
 
         main{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex-container(column);
 
 
 
@@ -211,9 +209,7 @@ body{
 
 
                 .main-heading{
-                    font-size: 2.7rem;
-                    font-weight: 250;
-                    letter-spacing: 0.2rem;
+                    @include font(2.7rem, 250,0.2rem);
 
                     .main-heading_highlight{
                         font-weight: 600;
@@ -223,9 +219,7 @@ body{
 
                 .sub-heading{
                     color: #CECECE;
-                    font-size: 1.8em;
-                    font-weight: 600;
-                    letter-spacing: 0.075rem;
+                    @include font(1.8em, 600, 0.075rem);
                     margin-top: 1rem;
 
                 }
@@ -233,8 +227,7 @@ body{
                 .mail-contact{
                     display: block;
                     margin-top: .5em;
-                    font-size: 1rem;
-                    font-weight: 550;
+                    @include font(1rem, 550);
                     color: #F9F9F9;
                 }
                 
