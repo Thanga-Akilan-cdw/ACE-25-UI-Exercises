@@ -13,7 +13,6 @@ $(document).ready(function() {
 
         //Load the Comments
       $.each(data.comments, function(index, comment) {
-        console.log(index, comment)
         // Comment Component 
         const commentUI = `
         <div class="comment-component">
@@ -53,7 +52,12 @@ $(document).ready(function() {
         // APpend the fragment to container
         $("#posterSection").append(postersFragment);
     })
+
+    // Copyright section
+    const copyrightElement = $("#copyright")
+    copyrightElement.html(`© Copyrights ${new Date().getFullYear()}`);
   });
+
 
 
 
