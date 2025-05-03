@@ -14,14 +14,15 @@ $(document).ready(function() {
         //Load the Comments
       $.each(data.comments, function(index, comment) {
         // Comment Component 
+        const {name, image, comment : commentMessage} = comment;
         const commentUI = `
         <div class="comment-component">
                 <div class="comment-img-wrapper">
-                    <img src=${'../public/'+comment.image}>
+                    <img src="../public/${image}">
                 </div>
                 <div class="comment-content">
-                    <p id="commentor-name" class="commentor-name">${comment.name}</p>
-                    <p class="comment-description">${comment.comment}</p>
+                    <p id="commentor-name" class="commentor-name">${name}</p>
+                    <p class="comment-description">${commentMessage}</p>
                 </div>
             </div>
         `;
@@ -40,10 +41,11 @@ $(document).ready(function() {
         const postersFragment = $(document.createDocumentFragment());
 
         $.each(posters, function(index,poster){
+            const { imageUrl, title: posterTitle} = poster;
             // Poster Component
             const posterUI = `
             <div class="poster-wrapper">
-                <img src=${poster.imageUrl} alt=${poster.title}/>
+                <img src=${imageUrl} alt=${posterTitle}/>
             </div>`
 
             // Append to Fragment
