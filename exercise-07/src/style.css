@@ -103,11 +103,11 @@ body{
 .logo-content{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 6rem;
-    row-gap: 5rem;
-    margin-top: 4.55rem;
+    column-gap: 3rem;
+    row-gap: 4.5rem;
+    margin-top: 5rem;
 }
 
 .logo-wrapper{
@@ -118,7 +118,8 @@ body{
 }
 
 .height-extension-wrapper{
-    height: 3rem;
+    height: 3.35rem;
+    width: 6rem;
 }
 
 .width-extension-wrapper{
