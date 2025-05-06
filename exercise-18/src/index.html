@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Movies</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Open Sans Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- External Stylesheet -->
+     <link rel="Stylesheet" href="../styles/style.css" >
+</head>
+<body>
+    <!-- Start of Nav Bar -->
+    <header class="header">
+        <h1 class="page-heading">Blender Movies</h1>
+        <div class="profile-container">
+            <p class="profile-name">Steffy Jerry</p>
+            <div class="profile-pic-wrapper">
+                <img id="profilePic" src="../public/images/reviewers/andy.png" alt="profile-pic" >
+            </div>
+        </div>
+    </header>
+    <!-- End of Nav Bar -->
+    <main class="main">
+        <section class="video-section">
+            <!-- Start of Video Container -->
+            <div class="video-container"> 
+                <div class="video-wrapper">
+                    <video controls id="videoComponent" poster="../public/images/thumbnail/sintel.png">
+                </div>
+                <h2 id="videoTitle" class="video-title"></h2>
+                <p id="videoDescription" class="video-description"></p>
+            </div>
+            <!-- End of Video Container -->
+            <hr>
+            <!-- Start of Comments Section -->
+            <div class="comments-section">
+                <p class="comment-title">Comments</p>
+                <div id="commentsContainer" class="comments-container">
+                </div>
+            </div>
+            <!-- End of Comments Section -->
+        </section>
+        <!-- Start of Poster Section -->
+        <section class="poster-section">
+            <h3>Upcoming Projects</h3>
+            <div id="posterSection" class="poster-container"></div>
+        </section>
+        <!-- End of Poster Section -->
+         <div class="chat-with-us">
+            <i class="fas fa-comment-alt"></i>
+         </div>
+    </main>
+    <!-- Start of Footer -->
+    <footer class="footer">
+        <p id="copyright"></p>
+        <p class="footer-site-name">Blender Movies</p>
+    </footer>
+    <!-- End of Footer  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
